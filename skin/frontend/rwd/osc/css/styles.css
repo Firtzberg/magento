@@ -30,7 +30,6 @@
  * Corrects `block` display not defined in IE 8/9.
  */
 
-
 article,
 aside,
 details,
@@ -491,8 +490,9 @@ input,
 select,
 table,
 textarea {
-  font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
-  color: #636363;
+  font-family:Georgia, serif;
+  /*font-family: "Helvetica Neue", Verdana, Arial, sans-serif;*/
+  color: #565656;
   font-size: 14px;
   line-height: 1.5;
 }
