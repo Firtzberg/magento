@@ -29,6 +29,18 @@
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
+ .page{
+  background-image: url('../images/osc-bg.jpg');
+ }
+ #header{
+  background-image: url('../images/header_bg.png');
+  background-repeat-y: no-repeat;
+ }
+ .main-container{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0px #dcdcdc;
+ }
 
 article,
 aside,
@@ -913,6 +925,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .product-cart-actions .button,
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
+  border-radius: 4px;
   background: #3399cc;
   display: inline-block;
   padding: 7px 15px;
@@ -3918,7 +3931,6 @@ a.skip-link {
 .footer {
   clear: both;
   width: 100%;
-  border-top: 1px solid #cccccc;
   padding-top: 30px;
   /* -------------------------------------------- *
    * Social icons

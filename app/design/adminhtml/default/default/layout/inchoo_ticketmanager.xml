@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento backend layout
+ *
+ * @author Magento
+ */
+-->
+<layout>
+    <adminhtml_ticket_index>
+        <reference name="content">
+            <block type="inchoo_ticketmanager/adminhtml_ticket" name="ticket" />
+        </reference>
+    </adminhtml_ticket_index>
+
+    <adminhtml_ticket_grid>
+        <block type="inchoo_ticketmanager/adminhtml_ticket_grid" name="root"/>
+    </adminhtml_ticket_grid>
+
+    <adminhtml_ticket_new>
+        <update handle="adminhtml_ticket_edit" />
+    </adminhtml_ticket_new>
+
+    <adminhtml_ticket_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="inchoo_ticketmanager/adminhtml_ticket_edit" name="ticket_edit" />
+        </reference>
+        <reference name="left">
+            <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tabs" name="ticket_edit_tabs">
+                <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tab_main" name="ticket_edit_tab_main" />
+                <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tab_message" name="ticket_edit_tab_message" />
+                <action method="addTab"><name>main_section</name><block>ticket_edit_tab_main</block></action>
+                <action method="addTab"><name>content_section</name><block>ticket_edit_tab_message</block></action>
+            </block>
+        </reference>
+    </adminhtml_ticket_edit>
+</layout>
