@@ -10,16 +10,16 @@
 		<models>
 			<inchoo_ticketmanager>
 				<class>Inchoo_Ticketmanager_Model</class>
-				<resourceModel>inchoo_ticketmanager_resource</resourceModel>
+				<resourceModel>res</resourceModel>
 			</inchoo_ticketmanager>
-			<inchoo_ticketmanager_resource>
+			<res>
 				<class>Inchoo_Ticketmanager_Model_Resource</class>
 				<entities>
 					<ticket>
 						<table>inchoo_ticketmanager_ticket</table>
 					</ticket>
 				</entities>
-			</inchoo_ticketmanager_resource>
+			</res>
 		</models>
         <helpers>
             <inchoo_ticketmanager>

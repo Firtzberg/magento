@@ -9,6 +9,10 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 			$this->setFlag('', 'no-dispatch', true);
 			$this->_redirect('noRoute');
 		}
+        if (!Mage::helper('customer')->isLoggedIn()) {
+            $this->setFlag('', 'no-dispatch', true);
+            $this->_redirect('customer/account');
+        }
 	}
 
 	public function indexAction()

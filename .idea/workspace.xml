@@ -22,26 +22,7 @@
     <favorites_list name="magento" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="inchoo_ticketmanager.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/inchoo_ticketmanager.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="20" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/item.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="60" selection-start="148" selection-end="148" vertical-scroll-proportion="0.02905983" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -90,18 +71,18 @@
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/system.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/adminhtml.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Resource/Ticket/Collection.php" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/config.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/install-1.0.1.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Message.php" />
         <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/layout/inchoo_ticketmanager.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Data.php" />
-        <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/inchoo_ticketmanager.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/list.phtml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/List.php" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/item.phtml" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/config.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/inchoo_ticketmanager.xml" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php" />
       </list>
     </option>
   </component>
@@ -386,6 +367,40 @@
               <option name="myItemId" value="default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -402,6 +417,190 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Account" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -676,14 +875,6 @@
               <option name="myItemId" value="Ticketmanager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inchoo_ticketmanager_setup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -716,40 +907,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magento" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magento" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="community" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inchoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ticketmanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Block" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,7 +971,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3956044" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27818447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -826,9 +982,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3956044" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -848,21 +1005,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Shipping/Model/Shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="24" selection-start="7416" selection-end="7416" vertical-scroll-proportion="0.0" vertical-offset="3519" max-vertical-offset="8704" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Usa/Model/Shipping/Carrier/Usps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="5" selection-start="3373" selection-end="3373" vertical-scroll-proportion="0.0" vertical-offset="1867" max-vertical-offset="33371" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Zend/Http/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1106" column="0" selection-start="34017" selection-end="34017" vertical-scroll-proportion="0.0" vertical-offset="18802" max-vertical-offset="26367" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Sales/Model/Quote/Address.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="943" column="67" selection-start="30365" selection-end="30377" vertical-scroll-proportion="0.0" vertical-offset="16031" max-vertical-offset="21522" />
@@ -931,41 +1073,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/etc/modules/Inchoo_Ticketmanager.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="60" selection-end="60" vertical-scroll-proportion="0.18941504" vertical-offset="0" max-vertical-offset="359" />
+      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="60" selection-end="60" vertical-scroll-proportion="0.18941504" vertical-offset="0" max-vertical-offset="359">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Observer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.5811966" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="20" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.5811966" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/CatalogRule/etc/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="39" selection-start="8078" selection-end="8078" vertical-scroll-proportion="0.63829786" vertical-offset="3248" max-vertical-offset="3859">
-          <folding />
-        </state>
+        <state line="214" column="39" selection-start="8078" selection-end="8078" vertical-scroll-proportion="0.63829786" vertical-offset="3248" max-vertical-offset="3859" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/CatalogRule/etc/adminhtml.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/system.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="67" selection-start="1295" selection-end="1295" vertical-scroll-proportion="1.02946" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/adminhtml.xml">
@@ -979,107 +1106,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Resource/Ticket/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
+        <state line="6" column="50" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="374" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/data/inchoo_ticketmanager_setup/data-install-1.0.1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Resource/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="138" selection-end="138" vertical-scroll-proportion="0.14529915" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="5" column="5" selection-start="138" selection-end="138" vertical-scroll-proportion="0.14529915" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="215" selection-end="215" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="10" column="7" selection-start="215" selection-end="215" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="240" selection-end="240" vertical-scroll-proportion="0.33156028" vertical-offset="0" max-vertical-offset="564">
-          <folding />
-        </state>
+        <state line="11" column="22" selection-start="240" selection-end="240" vertical-scroll-proportion="0.33156028" vertical-offset="0" max-vertical-offset="564" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tabs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.17435898" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.17435898" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="30" selection-start="1037" selection-end="1037" vertical-scroll-proportion="1.0461539" vertical-offset="0" max-vertical-offset="1921">
-          <folding />
-        </state>
+        <state line="36" column="30" selection-start="1037" selection-end="1037" vertical-scroll-proportion="1.0461539" vertical-offset="0" max-vertical-offset="1921" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.08717949" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="8" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.08717949" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/install-1.0.1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.34871796" vertical-offset="204" max-vertical-offset="850">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.34871796" vertical-offset="204" max-vertical-offset="850" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="36" selection-start="3029" selection-end="3029" vertical-scroll-proportion="-20.26923" vertical-offset="1224" max-vertical-offset="3519">
-          <folding />
-        </state>
+        <state line="103" column="36" selection-start="3029" selection-end="3029" vertical-scroll-proportion="-20.26923" vertical-offset="1224" max-vertical-offset="3519" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="14.384615" vertical-offset="612" max-vertical-offset="1241">
-          <folding />
-        </state>
+        <state line="14" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="14.384615" vertical-offset="612" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="40" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-29.692308" vertical-offset="418" max-vertical-offset="1870">
-          <folding />
-        </state>
+        <state line="70" column="40" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-29.692308" vertical-offset="418" max-vertical-offset="1870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="64" selection-start="2766" selection-end="2766" vertical-scroll-proportion="-4.6923075" vertical-offset="1459" max-vertical-offset="2074">
-          <folding />
-        </state>
+        <state line="93" column="64" selection-start="2766" selection-end="2766" vertical-scroll-proportion="-4.6923075" vertical-offset="1459" max-vertical-offset="2074" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/adminhtml/default/default/layout/inchoo_ticketmanager.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="98" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="33" column="98" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Customer/Helper/Data.php">
@@ -1091,84 +1188,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="5" selection-start="793" selection-end="793" vertical-scroll-proportion="-17.923077" vertical-offset="44" max-vertical-offset="629">
-          <folding />
-        </state>
+        <state line="30" column="5" selection-start="793" selection-end="793" vertical-scroll-proportion="-17.923077" vertical-offset="44" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/var/report/2116713274">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/var/report/1047584901">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="91" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+        <state line="2" column="35" selection-start="91" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/report/546352311">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="500" selection-end="500" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="47" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.5931624" vertical-offset="690" max-vertical-offset="1275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="44" selection-start="288" selection-end="288" vertical-scroll-proportion="0.2034188" vertical-offset="0" max-vertical-offset="585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/item.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="0.02905983" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/system.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="20" selection-start="334" selection-end="334" vertical-scroll-proportion="0.38952535" vertical-offset="0" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="60" selection-start="246" selection-end="275" vertical-scroll-proportion="0.31694916" vertical-offset="17" max-vertical-offset="1904">
+        <state line="39" column="20" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.30605564" vertical-offset="476" max-vertical-offset="1904">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/customer.xml">
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Customer/Block/Account/Navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.3411371" vertical-offset="714" max-vertical-offset="5083">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.9615383" vertical-offset="129" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/report/546352311">
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Customer/controllers/AddressController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="52" column="9" selection-start="1482" selection-end="1621" vertical-scroll-proportion="0.5811966" vertical-offset="153" max-vertical-offset="2890">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Ticket.php">
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Customer/controllers/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="500" selection-end="500" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459">
+        <state line="267" column="20" selection-start="8875" selection-end="8875" vertical-scroll-proportion="0.39685315" vertical-offset="3921" max-vertical-offset="16609">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/List.php">
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Adminhtml/Controller/Action.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="47" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.5931624" vertical-offset="690" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="288" selection-end="288" vertical-scroll-proportion="0.2034188" vertical-offset="0" max-vertical-offset="585">
+        <state line="344" column="23" selection-start="11279" selection-end="11279" vertical-scroll-proportion="0.3479021" vertical-offset="5258" max-vertical-offset="6290">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="19" selection-start="983" selection-end="983" vertical-scroll-proportion="0.8136752" vertical-offset="306" max-vertical-offset="1156">
+        <state line="10" column="9" selection-start="290" selection-end="290" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/customer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="23" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.43143812" vertical-offset="252" max-vertical-offset="5083">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/inchoo_ticketmanager.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/item.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="60" selection-start="148" selection-end="148" vertical-scroll-proportion="0.02905983" vertical-offset="0" max-vertical-offset="585">
+        <state line="41" column="43" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.806874" vertical-offset="204" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
