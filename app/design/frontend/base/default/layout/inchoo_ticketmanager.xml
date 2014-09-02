@@ -6,7 +6,7 @@
             <action method="addLink" translate="label title" module="inchoo_ticketmanager" ifconfig="ticket/view/enabled">
                 <name>ticket</name>
 				<path>ticket/</path>
-                <label>Tickets</label>
+                <label>My Tickets</label>
 			</action>
         </reference>
 	</customer_account>
@@ -27,7 +27,7 @@
 		</reference>-->
         <update handle="inchoo_ticketmanager_index_default"/>
         <reference name="my.account.wrapper">
-            <block type="inchoo_ticketmanager/list" name="ticket.list" template="inchoo/ticketmanager/list.phtml"/>
+            <block type="inchoo_ticketmanager/ticket_list" name="ticket.list"/>
         </reference>
     </inchoo_ticketmanager_index_index>
 
@@ -40,7 +40,7 @@
 			</action>
 		</reference>
 		<reference name="my.account.wrapper">
-			<block type="inchoo_ticketmanager/ticket" name="ticket.item" template="inchoo/ticketmanager/item.phtml"/>
+			<block type="inchoo_ticketmanager/ticket_item" name="ticket.item"/>
 		</reference>
 	</inchoo_ticketmanager_index_view>
 </layout>

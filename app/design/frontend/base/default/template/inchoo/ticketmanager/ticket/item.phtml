@@ -1,0 +1,23 @@
+<?php $_ticketItem = $this->helper('inchoo_ticketmanager')->getTicketItemInstance(); ?>
+<div id="ticket_item_messages"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+
+<div>
+	<h1><?php echo $this->escapeHtml($_ticketItem->getSubject()) ?></h1>
+	<div>
+		<div><?php echo $this->escapeHtml($_ticketItem->getMessage()) ?></div>
+        <div>
+            <h3>Replies - Total <?php echo $_ticketItem->getRepliesCount() ?></h3>
+            <?php foreach ($_ticketItem->getReplies() as $_reply): ?>
+                <div>
+                    Time: <?php echo $_reply->getData('created_at') ?>
+                    <div>
+                        <?php echo $_reply->getData('content') ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+		<a href="<?php echo $this->getBackUrl() ?>">
+			<?php echo Mage::helper('inchoo_ticketmanager')->__('Return to list') ?>
+		</a>
+	</div>
+</div>
