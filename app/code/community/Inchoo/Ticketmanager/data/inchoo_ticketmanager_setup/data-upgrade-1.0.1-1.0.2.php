@@ -22,5 +22,4 @@ foreach($dataRows as $data){
     $model->unsetData();
     $model->setData($data);
     $model->save();
-    echo var_dump($model);
 }

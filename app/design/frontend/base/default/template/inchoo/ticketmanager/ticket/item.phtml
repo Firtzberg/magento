@@ -3,15 +3,24 @@
 
 <div>
 	<h1><?php echo $this->escapeHtml($_ticketItem->getSubject()) ?></h1>
+    <p><?php echo Mage::helper('inchoo_ticketmanager')->__('Asked by')?> <?php echo $_ticketItem->getCustomer()->getName().' '.$_ticketItem->getCustomer()->getLastName()?></p>
+    <?php echo Mage::helper('inchoo_ticketmanager')->__('Status:') ?> <?php echo Mage::helper('inchoo_ticketmanager')->__($_ticketItem->getStatus()) ?>
+    <?php if($_ticketItem->isOpen()):?>
+        <a href="<?php echo Mage::getUrl('ticket/index/close', array('id' => $_ticketItem->getId()))?>"><?php
+        echo Mage::helper('inchoo_ticketmanager')->__('Close Ticket');
+            ?></a>
+    <?php endif; ?>
 	<div>
-		<div><?php echo $this->escapeHtml($_ticketItem->getMessage()) ?></div>
+		<div><?php echo nl2br($this->escapeHtml($_ticketItem->getMessage())) ?></div>
         <?php if(Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled()): ?>
             <a href="<?php echo $this->getEditUrl() ?>">
                 <?php echo Mage::helper('inchoo_ticketmanager')->__('Edit Ticket') ?>
             </a>
         <?php endif; ?>
         <div><?php echo $this->getChildHtml('reply.list'); ?></div>
+        <?php if($_ticketItem->isOpen()):?>
         <div><?php echo $this->getChildHtml('reply.form'); ?></div>
+        <?php endif; ?>
         <a href="<?php echo $this->getBackUrl() ?>">
             <?php echo Mage::helper('inchoo_ticketmanager')->__('Return to list') ?>
         </a>

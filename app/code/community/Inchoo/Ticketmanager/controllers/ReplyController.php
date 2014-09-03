@@ -8,6 +8,7 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
         if(!Mage::helper('inchoo_ticketmanager')->isEnabled()){
             $this->setFlag('', 'no-dispatch', true);
             $this->_redirect('noRoute');
+            return;
         }
         if (!Mage::helper('customer')->isLoggedIn()) {
             $this->setFlag('', 'no-dispatch', true);
@@ -26,10 +27,18 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
             $ticketId = $this->getRequest()->getParam('ticket_id');
             if (!$ticketId) {
                 $this->_redirect('noRoute');
+                return;
+            }
+            if(Mage::getModel('inchoo_ticketmanager/ticket')
+                ->addFielFilter('ticket_id', $ticketId)
+                ->count() < 1){
+                $this->_redirect('noRoute');
+                return;
             }
 
             $model->addData(array('ticket_id' => $data['ticket_id'],
-            'content' => $data['content']));
+                'content' => $data['content'],
+                'isAdmin' => 0));
 
             $session = Mage::getSingleton('core/session');
             try {

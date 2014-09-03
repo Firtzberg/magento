@@ -2,6 +2,9 @@
 
 class Inchoo_Ticketmanager_Model_Ticket extends Mage_Core_Model_Abstract
 {
+    const STATUS_OPEN = 0;
+    const STATUS_CLOSED = 1;
+
 	protected function _construct()
 	{
 		$this->_init('inchoo_ticketmanager/ticket');
@@ -35,5 +38,32 @@ class Inchoo_Ticketmanager_Model_Ticket extends Mage_Core_Model_Abstract
 
     public function getRepliesCount(){
         return $this->getReplies()->count();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOpen(){
+        return $this->getData('status') == self::STATUS_OPEN;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus(){
+        if($this->isOpen())
+            return "Open";
+        else return "Closed";
+    }
+
+    /**
+     * @var Mage_Customer_Model_Customer
+     */
+    private $_customer = null;
+    public function getCustomer(){
+        if($this->_customer == null){
+            $this->_customer = Mage::getModel('customer/customer')->load($this->getData('customer_id'));
+        }
+        return $this->_customer;
     }
 }

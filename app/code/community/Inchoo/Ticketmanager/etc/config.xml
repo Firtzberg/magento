@@ -3,7 +3,7 @@
 <config>
 	<modules>
 		<Inchoo_Ticketmanager>
-			<version>1.0.2</version>
+			<version>1.0.3</version>
 		</Inchoo_Ticketmanager>
 	</modules>
 	<global>

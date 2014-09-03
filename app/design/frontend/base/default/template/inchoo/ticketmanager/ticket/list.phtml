@@ -10,7 +10,7 @@
 				<a href="<?php echo $this->getItemUrl($ticketItem) ?>">
 					<?php echo $this->escapeHtml($ticketItem->getSubject()) ?>
 				</a>
-                (<?php echo $ticketItem->getRepliesCount() ?>)
+                (<?php echo $ticketItem->getRepliesCount() ?>)-<?php echo Mage::helper('inchoo_ticketmanager')->__($ticketItem->getStatus())?>
 			</h4>
 		</div>
 	<?php endforeach; ?>

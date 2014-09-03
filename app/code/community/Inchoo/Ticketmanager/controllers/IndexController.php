@@ -8,10 +8,12 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 		if(!Mage::helper('inchoo_ticketmanager')->isEnabled()){
 			$this->setFlag('', 'no-dispatch', true);
 			$this->_redirect('noRoute');
+            return;
 		}
         if (!Mage::helper('customer')->isLoggedIn()) {
             $this->setFlag('', 'no-dispatch', true);
             $this->_redirect('customer/account');
+            return;
         }
 	}
 
@@ -43,18 +45,25 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 
         $itemId = $this->getRequest()->getParam('id');
         if($itemId){
+            $session = Mage::getSingleton('core/session');
             //check if editing is enabled
-            if(!Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled())
+            if(!Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled()){
                 $this->_redirect('noRoute');
+                return;
+            }
             $model->load($itemId);
             if(!$model->getId()){
-                $this->_getSession()->addError(Mage::helper('inchoo_ticketmanager')->__('Ticket item does not exist.'));
+                $session->addError(Mage::helper('inchoo_ticketmanager')->__('Ticket item does not exist.'));
                 return $this->_redirect('/ticket');
+            }
+            if($model->getData('customer_id') !=  Mage::getSingleton('customer/session')->getCustomer()->getId()){
+                $this->_redirect('noRoute');
+                return;
             }
             $this->_title($model->getSubject());
         }
 
-        $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
+        $data = Mage::getSingleton('customer/session')->getFormData(true);
         if(!empty($data)){
             $model->addData($data);
         }
@@ -74,6 +83,7 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
         // check if data sent
         $data = $this->getRequest()->getParams();
         if ($data) {
+            $session = Mage::getSingleton('core/session');
             $data = $this->_filterPostData($data);
             // init model and set data
             $model = Mage::getModel('inchoo_ticketmanager/ticket');
@@ -82,14 +92,30 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
             $ticketId = $this->getRequest()->getParam('ticket_id');
             if ($ticketId) {
                 //check if editing of existing tickets is enabled
-                if(!Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled())
+                if(!Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled()){
                     $this->_redirect('noRoute');
+                    return;
+                }
                 $model->load($ticketId);
+                if($model->getId()){
+                    if($model->getData('customer_id') !=  Mage::getSingleton('customer/session')->getCustomer()->getId()){
+                        $session->addError(Mage::helper('inchoo_ticketmanager')->__('You can edit only your Tickets'));
+                        $this->_redirect('noRoute');
+                        return;
+                    }
+                }
+            }
+            else{
+                $model->setData(
+                    array(
+                        'website_id' => Mage::app()->getWebsite()->getId(),
+                        'customer_id' => Mage::getSingleton('customer/session')->getCustomer()->getId(),
+                        'status' => Inchoo_Ticketmanager_Model_Ticket::STATUS_OPEN
+                    ));
             }
 
             $model->addData($data);
 
-            $session = Mage::getSingleton('core/session');
             try {
                 $hasError = false;
 
@@ -159,5 +185,43 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 		$this->renderLayout();
 	}
 
+    public function closeAction(){
 
+        $ticket_id = $this->getRequest()->getParam('id');
+        if(!$ticket_id){
+            $this->_redirect('noRoute');
+            return;
+        }
+
+        /**
+         * @var Inchoo_Ticketmanager_Model_Ticket
+         */
+        $model = Mage::getModel('inchoo_ticketmanager/ticket')->load($ticket_id);
+        if(!$model->getId()){
+            $this->_redirect('noRoute');
+            return;
+        }
+        //customers may close only their own tickets
+        if($model->getData('customer_id') != Mage::getSingleton('customer/session')->getCustomer()->getId()){
+            $this->_redirect('noRoute');
+            return;
+        }
+
+        $model->setData('status', Inchoo_Ticketmanager_Model_Ticket::STATUS_CLOSED);
+        $session = Mage::getSingleton('core/session');
+        try{
+            $model->save();
+            $session->addSuccess(
+                Mage::helper('inchoo_ticketmanager')->__('The Ticket item has been closed.')
+            );
+        } catch (Mage_Core_Exception $e) {
+            $session->addError($e->getMessage());
+        } catch (Exception $e) {
+            $session->addException($e,
+                Mage::helper('inchoo_ticketmanager')->__('An error occurred while closing the ticket item.')
+            );
+        }
+
+        $this->_redirect('ticket/index/view', array('id' => $ticket_id));
+    }
 }
