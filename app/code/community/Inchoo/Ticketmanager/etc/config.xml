@@ -104,6 +104,7 @@
             <view>
                 <enabled>1</enabled>
                 <items_per_page>20</items_per_page>
+                <edit_ticket_enabled>0</edit_ticket_enabled>
             </view>
         </ticket>
     </default>

@@ -40,7 +40,18 @@
 			</action>
 		</reference>
 		<reference name="my.account.wrapper">
-			<block type="inchoo_ticketmanager/ticket_item" name="ticket.item"/>
+			<block type="inchoo_ticketmanager/ticket_item" name="ticket.item">
+                <block type="inchoo_ticketmanager/reply_list" name="reply.list"/>
+                <block type="inchoo_ticketmanager/reply_form" name="reply.form"/>
+            </block>
 		</reference>
 	</inchoo_ticketmanager_index_view>
+
+    <inchoo_ticketmanager_index_edit translate="label">
+        <label>Edit Ticket Item</label>
+        <update handle="inchoo_ticketmanager_index_default"/>
+        <reference name="my.account.wrapper">
+            <block type="inchoo_ticketmanager/ticket_form" name="ticket.form"/>
+        </reference>
+    </inchoo_ticketmanager_index_edit>
 </layout>

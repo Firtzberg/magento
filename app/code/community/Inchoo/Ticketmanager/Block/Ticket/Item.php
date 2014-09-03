@@ -21,4 +21,8 @@ class Inchoo_Ticketmanager_Block_Ticket_Item extends Mage_Core_Block_Template
     {
     	return $this->getUrl('*/', array('_query' => $this->_getBackQueryParams()));
     }
+
+    public function getEditUrl(){
+        return $this->getUrl('ticket/index/edit', array('id' => $this->helper('inchoo_ticketmanager')->getTicketItemInstance()->getId()));
+    }
 }

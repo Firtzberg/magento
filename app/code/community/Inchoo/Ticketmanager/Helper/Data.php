@@ -6,6 +6,8 @@ class Inchoo_Ticketmanager_Helper_Data extends Mage_Core_Helper_Data
 
 	const XML_PATH_ITEMS_PER_PAGE = 'ticket/view/items_per_page';
 
+    const XML_PATH_EDIT_TICKET_ENABLED = 'ticket/view/edit_ticket_enabled';
+
 	protected $_ticketItemInstance;
 
 	public function isEnabled($store = null){
@@ -29,4 +31,9 @@ class Inchoo_Ticketmanager_Helper_Data extends Mage_Core_Helper_Data
 
 		return $this->_ticketItemInstance;
 	}
+
+    public function getEditTicketEnabled(){
+        return false;
+        return Mage::getConfig(self::XML_PATH_EDIT_TICKET_ENABLED);
+    }
 }

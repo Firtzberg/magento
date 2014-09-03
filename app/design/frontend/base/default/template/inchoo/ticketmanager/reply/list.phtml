@@ -1,0 +1,9 @@
+<h3>Replies - Total <?php echo $this->getCollection()->count() ?></h3>
+<?php foreach ($this->getCollection() as $_reply): ?>
+    <div>
+        Time: <?php echo $_reply->getData('created_at') ?>
+        <div>
+            <?php echo $this->escapeHtml($_reply->getData('content')) ?>
+        </div>
+    </div>
+<?php endforeach; ?>

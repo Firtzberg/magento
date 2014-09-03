@@ -24,7 +24,7 @@
 						<enabled translate="label">
 							<label>Enable Tickets On Frontend</label>
 							<frontend_type>select</frontend_type>
-							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -33,13 +33,22 @@
 						<items_per_page translate="label">
 							<label>Tickets Per Page</label>
 							<comment>Empty value is the same as default 20.</comment>
-							<source_model>adminhtml/system_config_source_yesno</source_model>
 							<sort_order>30</sort_order>
 							<depends><enabled>1</enabled></depends>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</items_per_page>
+                        <edit_ticket_enabled translate="label">
+                            <label>Enable Editing of Existing Tickets</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <depends><enabled>1</enabled></depends>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </edit_ticket_enabled>
 					</fields>
 				</view>
 			</groups>

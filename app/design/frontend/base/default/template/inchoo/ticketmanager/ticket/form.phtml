@@ -1,0 +1,25 @@
+<form action="<?php echo $this->getSaveUrl() ?>" method="post" id="form-ticket-validate">
+    <?php if($this->getTicket()->hasData('ticket_id')): ?>
+        <input type="hidden" name="ticket_id" value="<?php echo $this->getTicket()->getId()?>" />
+    <?php endif; ?>
+    <input type="hidden" name="return_url" value="<?php echo urlencode(Mage::getUrl('ticket')) ?>" />
+    <div class="fieldset">
+        <h2 class="legend"><?php echo $this->__('Add new ticket') ?></h2>
+        <ul class="form-list">
+            <li class="wide">
+                <div class="field">
+                    <label for="ticket" class="required">Subject:<em>*</em></label>
+                    <div class="input-box"><input type="text" id="ticket" name="subject" class="input-text required-entry" value="<?php echo $this->getTicket()->getSubject(); ?>"/></div>
+                </div>
+            </li>
+            <li class="wide">
+                <label for="ticket" class="required">Message:<em>*</em></label>
+                <div class="input-box"><textarea id="ticket" name="message" class="input-text required-entry" ><?php echo $this->getTicket()->getMessage() ?></textarea></div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set">
+        <p class="required">* Required Fields</p>
+        <button type="submit" title="<?php echo $this->__('Post Ticket') ?>" class="button"><span><span><?php echo $this->__('Post Ticket') ?></span></span></button>
+    </div>
+</form>

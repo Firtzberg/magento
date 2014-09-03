@@ -1,0 +1,18 @@
+<form action="<?php echo $this->getSaveUrl() ?>" method="post" id="form-reply-validate">
+    <?php if($this->getTicket()->hasData('ticket_id')): ?>
+        <input type="hidden" name="ticket_id" value="<?php echo $this->getTicket()->getId()?>" />
+    <?php endif; ?>
+    <div class="fieldset">
+        <h2 class="legend"><?php echo $this->__('Add new Reply') ?></h2>
+        <ul class="form-list">
+            <li class="wide">
+                <label for="ticket" class="required">Content:<em>*</em></label>
+                <div class="input-box"><textarea id="reply" name="content" class="input-text required-entry" ></textarea></div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set">
+        <p class="required">* Required Fields</p>
+        <button type="submit" title="<?php echo $this->__('Post Reply') ?>" class="button"><span><span><?php echo $this->__('Post Reply') ?></span></span></button>
+    </div>
+</form>
