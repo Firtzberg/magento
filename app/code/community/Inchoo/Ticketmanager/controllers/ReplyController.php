@@ -30,7 +30,8 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
                 return;
             }
             if(Mage::getModel('inchoo_ticketmanager/ticket')
-                ->addFielFilter('ticket_id', $ticketId)
+                ->getCollection()
+                ->addFieldToFilter('ticket_id', $ticketId)
                 ->count() < 1){
                 $this->_redirect('noRoute');
                 return;
@@ -38,7 +39,9 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
 
             $model->addData(array('ticket_id' => $data['ticket_id'],
                 'content' => $data['content'],
-                'isAdmin' => 0));
+                'isAdmin' => 0,
+                'customer_id' => Mage::getSingleton('customer/session')->getCustomer()->getId()
+            ));
 
             $session = Mage::getSingleton('core/session');
             try {
