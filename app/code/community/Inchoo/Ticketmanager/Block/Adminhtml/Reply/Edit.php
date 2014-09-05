@@ -18,11 +18,20 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit extends Mage_Adminhtml_Blo
 
         parent::__construct();
 
-        $model = Mage::getModel('inchoo_ticketmanager/reply')->load($this->getRequest()->getParam('id'));
-        if($model->getId()){
+        //in case a new reply is made
+        $ticket_id = $this->getRequest()->getParam('ticket_id');
+        if(!$ticket_id){
+            //if reply is edited
+            $model = Mage::getModel('inchoo_ticketmanager/reply')->load($this->getRequest()->getParam('id'));
+            if($model->getId()){
+                //reply really exists
+                $ticket_id = $model->getData('ticket_id');
+            }
+        }
+        if($ticket_id){
             $this->_addButton('to_ticket',array(
                 'label' => Mage::helper('adminhtml')->__('Back to Ticket'),
-                'onclick' => "setLocation('".$this->getUrl('*/ticket/edit', array('id' => $model->getData('ticket_id')))."')",
+                'onclick' => "setLocation('".$this->getUrl('*/ticket/edit', array('id' => $ticket_id))."')",
             ),0,100);
         }
 

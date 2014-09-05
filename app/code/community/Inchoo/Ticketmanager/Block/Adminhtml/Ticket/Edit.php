@@ -37,7 +37,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
 
         $this->_addButton('reply', array(
             'label' => Mage::helper('adminhtml')->__('Reply to Ticket'),
-            'onclick' => "setLocation('".$this->getUrl('*/reply/new', array('id' => $this->getRequest()->getParam('id')))."')",
+            'onclick' => "setLocation('".$this->getUrl('*/reply/new', array('ticket_id' => $this->getRequest()->getParam('id')))."')",
         ), 0, 100);
 
         $this->_formScripts[] = "

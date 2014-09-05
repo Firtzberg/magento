@@ -29,7 +29,7 @@ class Inchoo_Ticketmanager_Adminhtml_ReplyController extends Mage_adminhtml_Cont
             ->_title($this->__('Reply'));
 
         //id represents the ticket
-        $itemId = $this->getRequest()->getParam('id');
+        $itemId = $this->getRequest()->getParam('ticket_id');
         if(!$itemId){
             $this->_getSession()->addError('No ticket was referenced');
             return $this->_redirectToTicketGrid();

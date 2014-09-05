@@ -22,7 +22,26 @@
     <favorites_list name="magento" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="32" selection-start="620" selection-end="620" vertical-scroll-proportion="-10.269231" vertical-offset="124" max-vertical-offset="1530">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="34" selection-start="893" selection-end="893" vertical-scroll-proportion="0.40725243" vertical-offset="218" max-vertical-offset="4335">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -69,7 +88,6 @@
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/upgrade-1.0.3-1.0.4.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Data.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Tab/Main.php" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/adminhtml.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Main.php" />
@@ -80,9 +98,10 @@
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php" />
         <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/layout/inchoo_ticketmanager.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tabs.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit.php" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php" />
       </list>
     </option>
   </component>
@@ -119,7 +138,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -922,6 +940,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -990,14 +1009,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1005,11 +1024,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3956044" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3956044" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1066,9 +1085,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="21" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.50209206" vertical-offset="490" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="50" column="21" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.50209206" vertical-offset="490" max-vertical-offset="1258" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/system.xml">
@@ -1105,9 +1122,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Adminhtml/Block/Widget/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="20" selection-start="6734" selection-end="6734" vertical-scroll-proportion="0.34449095" vertical-offset="4224" max-vertical-offset="28237">
-          <folding />
-        </state>
+        <state line="286" column="20" selection-start="6734" selection-end="6734" vertical-scroll-proportion="0.34449095" vertical-offset="4224" max-vertical-offset="28237" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Tax/etc/system.xml">
@@ -1134,23 +1149,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/inchoo_ticketmanager.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="81" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.5652759" vertical-offset="328" max-vertical-offset="1071">
-          <folding />
-        </state>
+        <state line="44" column="81" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.5652759" vertical-offset="328" max-vertical-offset="1071" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Observer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/upgrade-1.0.2-1.0.3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="38" selection-start="0" selection-end="1647" vertical-scroll-proportion="-14.192307" vertical-offset="566" max-vertical-offset="1309">
-          <folding />
-        </state>
+        <state line="55" column="38" selection-start="0" selection-end="1647" vertical-scroll-proportion="-14.192307" vertical-offset="566" max-vertical-offset="1309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/config.xml">
@@ -1162,72 +1171,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="556" selection-end="556" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="23" column="68" selection-start="556" selection-end="556" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/upgrade-1.0.3-1.0.4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="352" selection-end="352" vertical-scroll-proportion="-4.0384617" vertical-offset="201" max-vertical-offset="918">
-          <folding />
-        </state>
+        <state line="18" column="23" selection-start="352" selection-end="352" vertical-scroll-proportion="-4.0384617" vertical-offset="201" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="3443" selection-end="3443" vertical-scroll-proportion="-66.03846" vertical-offset="51" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="22" selection-start="7141" selection-end="7141" vertical-scroll-proportion="0.38354254" vertical-offset="3227" max-vertical-offset="4335">
-          <folding />
-        </state>
+        <state line="104" column="0" selection-start="3443" selection-end="3443" vertical-scroll-proportion="-66.03846" vertical-offset="51" max-vertical-offset="2533" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Tabs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="99" selection-start="145" selection-end="177" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
+        <state line="6" column="99" selection-start="145" selection-end="177" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="274" selection-end="274" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="11" column="57" selection-start="274" selection-end="274" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="716" selection-end="716" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="22" column="26" selection-start="716" selection-end="716" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="488" selection-end="488" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="19" column="10" selection-start="488" selection-end="488" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="743">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="743" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tabs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="15" selection-start="7836" selection-end="8165" vertical-scroll-proportion="0.735007" vertical-offset="2295" max-vertical-offset="3757">
-          <folding />
-        </state>
+        <state line="189" column="15" selection-start="7836" selection-end="8165" vertical-scroll-proportion="0.735007" vertical-offset="2295" max-vertical-offset="3757" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/adminhtml.xml">
@@ -1239,37 +1223,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Tab/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="15" selection-start="4205" selection-end="4205" vertical-scroll-proportion="-76.5" vertical-offset="0" max-vertical-offset="3179">
-          <folding />
-        </state>
+        <state line="117" column="15" selection-start="4205" selection-end="4205" vertical-scroll-proportion="-76.5" vertical-offset="0" max-vertical-offset="3179" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="55" selection-start="973" selection-end="981" vertical-scroll-proportion="0.21757323" vertical-offset="388" max-vertical-offset="1105">
-          <folding />
-        </state>
+        <state line="32" column="55" selection-start="973" selection-end="981" vertical-scroll-proportion="0.21757323" vertical-offset="388" max-vertical-offset="1105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="11" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.61645746" vertical-offset="510" max-vertical-offset="2839">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/report/791604272">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
-          <folding />
-        </state>
+        <state line="56" column="11" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.61645746" vertical-offset="510" max-vertical-offset="2839" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="841" selection-end="841" vertical-scroll-proportion="-18.307692" vertical-offset="51" max-vertical-offset="2499">
-          <folding />
-        </state>
+        <state line="31" column="25" selection-start="841" selection-end="841" vertical-scroll-proportion="-18.307692" vertical-offset="51" max-vertical-offset="2499" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/adminhtml/default/default/layout/inchoo_ticketmanager.xml">
@@ -1281,63 +1250,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="5" selection-start="6010" selection-end="6010" vertical-scroll-proportion="-23.0" vertical-offset="2802" max-vertical-offset="3519">
-          <folding />
-        </state>
+        <state line="200" column="5" selection-start="6010" selection-end="6010" vertical-scroll-proportion="-23.0" vertical-offset="2802" max-vertical-offset="3519" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tab/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1794" selection-end="1794" vertical-scroll-proportion="1.3751743" vertical-offset="0" max-vertical-offset="1955">
-          <folding />
-        </state>
+        <state line="58" column="0" selection-start="1794" selection-end="1794" vertical-scroll-proportion="1.3751743" vertical-offset="0" max-vertical-offset="1955" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tabs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.47419804" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="20" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.47419804" vertical-offset="0" max-vertical-offset="731" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="95" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.6933535" vertical-offset="255" max-vertical-offset="1309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="127" selection-start="1500" selection-end="1500" vertical-scroll-proportion="-13.192307" vertical-offset="320" max-vertical-offset="1326">
+        <state line="39" column="84" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.47838214" vertical-offset="320" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="-12.230769" vertical-offset="141" max-vertical-offset="1377">
+        <state line="23" column="32" selection-start="620" selection-end="620" vertical-scroll-proportion="-10.269231" vertical-offset="124" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/report/1027575525">
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/report/889423832">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="95" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.6933535" vertical-offset="255" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/report/637393547">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
+        <state line="30" column="34" selection-start="893" selection-end="893" vertical-scroll-proportion="0.40725243" vertical-offset="218" max-vertical-offset="4335">
           <folding />
         </state>
       </provider>
