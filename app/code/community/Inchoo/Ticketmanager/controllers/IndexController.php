@@ -82,6 +82,7 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 
         // check if data sent
         $data = $this->getRequest()->getParams();
+        $isNew = true;
         if ($data) {
             $session = Mage::getSingleton('core/session');
             $data = $this->_filterPostData($data);
@@ -104,8 +105,15 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
                         return;
                     }
                 }
+                else{
+                    $session->addError(Mage::helper('inchoo_ticketmanager')->__('Ticket Item does not exist'));
+                    $this->_redirect('noRoute');
+                    return;
+                }
+                $isNew = false;
             }
-            else{
+
+            if($isNew){
                 $model->setData(
                     array(
                         'website_id' => Mage::app()->getWebsite()->getId(),
@@ -113,7 +121,6 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
                         'status' => Inchoo_Ticketmanager_Model_Ticket::STATUS_OPEN
                     ));
             }
-
             $model->addData($data);
 
             try {
@@ -165,6 +172,10 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 		if(!$model->getId()){
 			return $this->_forward('noRoute');
 		}
+
+        if($model->getData('customer_id') != Mage::getSingleton('customer/session')->getCustomer()->getId()){
+            return $this->_forward('noRoute');
+        }
 
 		Mage::register('ticket_item', $model);
 

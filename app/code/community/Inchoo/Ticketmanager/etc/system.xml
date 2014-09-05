@@ -39,6 +39,15 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</items_per_page>
+                        <replies_per_page translate="label">
+                            <label>Replies Per Page</label>
+                            <comment>Empty value is the same as default 20.</comment>
+                            <sort_order>31</sort_order>
+                            <depends><enabled>1</enabled></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </replies_per_page>
                         <edit_ticket_enabled translate="label">
                             <label>Enable Editing of Existing Tickets</label>
                             <frontend_type>select</frontend_type>

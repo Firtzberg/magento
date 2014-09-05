@@ -4,7 +4,7 @@
  *
  * @author Magento
  */
-class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     /**
      * Init Grid default properties
@@ -13,7 +13,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
     public function __construct()
     {
         parent::__construct();
-        $this->setId('ticket_list_grid');
+        $this->setId('reply_list_grid');
         $this->setDefaultSort('created_at');
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
@@ -27,26 +27,30 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('inchoo_ticketmanager/ticket')->getResourceCollection();
-        $collection->getSelect()->joinLeft(
-            array('ws' => Mage::getSingleton('core/resource')->getTableName('core/website')),
-            'main_table.website_id=ws.website_id',
-            array('website_name' => 'name'));
-
-        $attributes = array('firstname', 'middlename', 'lastname');
-        foreach($collection as $item){
-            $customer = Mage::getModel('customer/customer')
-                    ->load($item->getData('customer_id'));
-            $str = '';
-            foreach($attributes as $attribute){
-                if($customer->getData($attribute) != null){
-                    $str .= ' ';
-                    $str .= $customer->getData($attribute);
-                }
-            }
-            $item->setData('customer_name', trim($str));
+        $collection = Mage::getModel('inchoo_ticketmanager/reply')->getResourceCollection();
+        if($this->getRequest()->getParam('id')){
+            $collection->addFieldToFilter('ticket_id', $this->getRequest()->getParam('id'));
         }
 
+        $attributes = array('firstname', 'middlename', 'lastname');
+        $replier = null;
+        foreach($collection as $item){
+            $str = '';
+            if($item->getData('isAdmin') == 1){
+                $replier = Mage::getModel('admin/user')
+                    ->load($item->getData('admin_id'));
+            }else{
+                $replier = Mage::getModel('customer/customer')
+                    ->load($item->getData('customer_id'));
+            }
+            foreach($attributes as $attribute){
+                if($replier->getData($attribute) != null){
+                    $str .= ' ';
+                    $str .= $replier->getData($attribute);
+                }
+            }
+            $item->setData('replier_name', trim($str));
+        }
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }
@@ -58,29 +62,23 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
      */
     protected function _prepareColumns()
     {
-        $this->addColumn('ticket_id', array(
+        $this->addColumn('reply_id', array(
             'header'    => Mage::helper('inchoo_ticketmanager')->__('ID'),
             'width'     => '50px',
-            'index'     => 'ticket_id',
+            'index'     => 'reply_id',
         ));
 
-        $this->addColumn('subject', array(
-            'header'    => Mage::helper('inchoo_ticketmanager')->__('Ticket Subject'),
-            'index'     => 'subject',
+        $this->addColumn('content', array(
+            'header'    => Mage::helper('inchoo_ticketmanager')->__('Content'),
+            'index'     => 'content',
         ));
 
-        $this->addColumn('customer_name', array(
-            'header'    => Mage::helper('inchoo_ticketmanager')->__('Customer'),
-            'index'     => 'customer_name',
+        $this->addColumn('replier_name', array(
+            'header'    => Mage::helper('inchoo_ticketmanager')->__('Replier'),
+            'index'     => 'replier_name',
+            'width'    => '170px',
             'filter'    => false,
-            'sortable'=> false
-        ));
-
-        $this->addColumn('website_name', array(
-            'header'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
-            'index'     => 'website_name',
-            'sortable'  => false,
-            'filter'    => false
+            'sortable'  => false
         ));
 
         $this->addColumn('created_at', array(
@@ -91,15 +89,16 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
             'type'     => 'datetime',
         ));
 
-        $this->addColumn('status', array(
-            'header'   => Mage::helper('inchoo_ticketmanager')->__('Status'),
+        $this->addColumn('isAdmin', array(
+            'header'   => Mage::helper('inchoo_ticketmanager')->__('Replier is Admin'),
             'sortable' => true,
+            //'filter'   => true,
             'width'    => '170px',
-            'index'    => 'status',
+            'index'    => 'isAdmin',
             'type'     => 'options',
             'options'  => array(
-                1 => Mage::helper('inchoo_ticketmanager')->__('Closed'),
-                0 => Mage::helper('inchoo_ticketmanager')->__('Open'),
+                1 => Mage::helper('inchoo_ticketmanager')->__('Yes'),
+                0 => Mage::helper('inchoo_ticketmanager')->__('No'),
             )
         ));
 
@@ -114,9 +113,8 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
                     'url'     => array('base' => '*/*/edit'),
                     'field'   => 'id'
                 )),
-                'filter'    => false,
                 'sortable'  => false,
-                'index'     => 'ticket',
+                'index'     => 'reply',
             ));
 
         return parent::_prepareColumns();
@@ -129,7 +127,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
      */
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+        return $this->getUrl('*/reply/edit', array('id' => $row->getId()));
     }
 
     /**
@@ -139,6 +137,6 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
      */
     public function getGridUrl()
     {
-        return $this->getUrl('*/*/grid', array('_current' => true));
+        return $this->getUrl('*/reply/grid', array('_current' => true));
     }
 }

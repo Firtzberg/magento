@@ -49,22 +49,15 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit_Tab_Message
             'class'  => 'fieldset-wide'
         ));
 
-        $wysiwygConfig = Mage::getSingleton('cms/wysiwyg_config')->getConfig(array(
-            'tab_id' => $this->getTabId()
-        ));
-
-        $contentField = $fieldset->addField('message', 'editor', array(
+        $fieldset->addField('message', 'textarea', array(
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Message'),
+            'title'    => Mage::helper('inchoo_ticketmanager')->__('Message'),
             'name'     => 'message',
-            'style'    => 'height:36em;',
             'required' => true,
             'disabled' => $isElementDisabled,
-            'config'   => $wysiwygConfig
         ));
 
         // Setting custom renderer for content field to remove label column
-        $renderer = $this->getLayout()->createBlock('adminhtml/widget_form_renderer_fieldset_element')
-            ->setTemplate('cms/page/edit/form/renderer/content.phtml');
-        $contentField->setRenderer($renderer);
 
         $form->setValues($model->getData());
         $this->setForm($form);

@@ -12,33 +12,54 @@
 				</manage>
 			</children>
 		</ticket>
-	</menu>
+    </menu>
 
 	<acl>
 		<resources>
 			<admin>
 				<children>
-					<ticket translate="title" module="inchoo_ticketmanager">
-						<title>Ticket</title>
-						<sort_order>71</sort_order>
-						<children>
-							<manage translate="title">
-								<title>Manage Tickets</title>
-								<sort_order>68</sort_order>
-								<children>
-									<save  translate="title">
-										<title>Save Ticket</title>
-										<sort_order>0</sort_order>
-									</save>
-									<delete  translate="title">
-										<title>Delete Ticket</title>
-										<sort_order>10</sort_order>
-									</delete>
-								</children>
-								<action>adminhtml/ticket</action>
-							</manage>
-						</children>
-					</ticket>
+                    <ticket translate="title" module="inchoo_ticketmanager">
+                        <title>Ticket</title>
+                        <sort_order>71</sort_order>
+                        <children>
+                            <manage translate="title">
+                                <title>Manage Tickets</title>
+                                <sort_order>68</sort_order>
+                                <children>
+                                    <save  translate="title">
+                                        <title>Save Ticket</title>
+                                        <sort_order>0</sort_order>
+                                    </save>
+                                    <delete  translate="title">
+                                        <title>Delete Ticket</title>
+                                        <sort_order>10</sort_order>
+                                    </delete>
+                                </children>
+                                <action>adminhtml/ticket</action>
+                            </manage>
+                        </children>
+                    </ticket>
+                    <reply translate="title" module="inchoo_ticketmanager">
+                        <title>Reply</title>
+                        <sort_order>72</sort_order>
+                        <children>
+                            <manage translate="title">
+                                <title>Manage Replies</title>
+                                <sort_order>68</sort_order>
+                                <children>
+                                    <save  translate="title">
+                                        <title>Save Reply</title>
+                                        <sort_order>0</sort_order>
+                                    </save>
+                                    <delete  translate="title">
+                                        <title>Delete Reply</title>
+                                        <sort_order>10</sort_order>
+                                    </delete>
+                                </children>
+                                <action>adminhtml/reply</action>
+                            </manage>
+                        </children>
+                    </reply>
 					<system>
 						<children>
 							<config>

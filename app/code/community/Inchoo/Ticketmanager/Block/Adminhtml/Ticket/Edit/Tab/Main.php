@@ -51,10 +51,64 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit_Tab_Main
         $fieldset->addField('created_at', 'date', array(
             'name'     => 'created_at',
             'format'   => Mage::app()->getLocale()->getDateFormat(Mage_Core_Model_Locale::FORMAT_TYPE_SHORT),
-            'image'    => $this->getSkinUrl('images/grid-cal.gif'),
             'label'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
             'title'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
-            'required' => true
+            'readonly' => true,
+        ));
+
+        $fieldset->addField('status', 'select', array(
+            'name'     => 'status',
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Status'),
+            'title'    => Mage::helper('inchoo_ticketmanager')->__('Status'),
+            'required' => true,
+            'disabled' => $isElementDisabled,
+            'values'   => array(
+                1  => array('value' => 0, 'label' => Mage::helper('inchoo_ticketmanager')->__('Open')),
+                2  => array('value' => 1, 'label' => Mage::helper('inchoo_ticketmanager')->__('Closed'))
+            )
+        ));
+
+        $model->setData('website_name', Mage::getModel('core/website')->load($model->getData('website_id'))->getData('name'));
+
+        $fieldset->addField('website_name', 'text', array(
+            'name'     => 'website_name',
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
+            'title'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
+            'disabled' => $isElementDisabled,
+            'readonly' => true
+        ));
+
+        $fieldset = $form->addFieldset('customer_fieldset', array(
+            'legend' => Mage::helper('inchoo_ticketmanager')->__('Customer Info')
+        ));
+
+        $customer = Mage::getModel('customer/customer')->load($model->getData('customer_id'));
+
+        $model->setData('customer_email', $customer->getData('email'));
+        $attributes = array('firstname', 'middlename', 'lastname');
+        $str = '';
+        foreach($attributes as $attribute){
+            if($customer->getData($attribute) != null){
+                $str .= ' ';
+                $str .= $customer->getData($attribute);
+            }
+        }
+        $model->setData('customer_name', trim($str));
+
+
+        $fieldset->addField('customer_name', 'link', array(
+            'name'     => 'customer_name',
+            'href'     => Mage::helper("adminhtml")->getUrl('adminhtml/customer/edit', array('id' => $model->getData('customer_id'))),
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Customer'),
+            'readonly' => true,
+            'title'    => 'Show customer'
+        ));
+        $fieldset->addField('customer_email', 'link', array(
+            'name'     => 'customer_email',
+            'href'     => 'mailto:'.$model->getData('customer_email'),
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Customer Email'),
+            'title'    => Mage::helper('inchoo_ticketmanager')->__('Send Email'),
+            'readonly' => true
         ));
 
         Mage::dispatchEvent('adminhtml_ticket_edit_tab_main_prepare_form', array('form' => $form));

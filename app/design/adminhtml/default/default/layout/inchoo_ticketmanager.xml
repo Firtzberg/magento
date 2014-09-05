@@ -35,4 +35,50 @@
             </block>
         </reference>
     </adminhtml_ticket_edit>
+
+    <!--<adminhtml_ticket_replies>
+        <block type="core/text_list" name="replies_root" output="toHtml">
+            <block type="inchoo_ticketmanager/adminhtml_reply_grid" name="reply_grid"/>
+            <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
+                <reference name="grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>reply_grid</grid_block_name>
+                        <data_callback>gerSelectedReplies</data_callback>
+                        <hidden_input_name>links[replies]</hidden_input_name>
+                        <reload_para_name>replies</reload_para_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_ticket_replies>-->
+
+    <adminhtml_reply_index>
+        <reference name="content">
+            <block type="inchoo_ticketmanager/adminhtml_reply" name="ticket" />
+        </reference>
+    </adminhtml_reply_index>
+
+    <adminhtml_reply_grid>
+        <block type="inchoo_ticketmanager/adminhtml_reply_grid" name="root"/>
+    </adminhtml_reply_grid>
+
+    <adminhtml_reply_new>
+        <update handle="adminhtml_reply_edit" />
+    </adminhtml_reply_new>
+
+    <adminhtml_reply_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="inchoo_ticketmanager/adminhtml_reply_edit" name="reply_edit" />
+        </reference>
+        <reference name="left">
+            <block type="inchoo_ticketmanager/adminhtml_reply_edit_tabs" name="reply_edit_tabs">
+                <block type="inchoo_ticketmanager/adminhtml_reply_edit_tab_main" name="reply_edit_tab_main" />
+                <action method="addTab"><name>main_section</name><block>reply_edit_tab_main</block></action>
+            </block>
+        </reference>
+    </adminhtml_reply_edit>
 </layout>

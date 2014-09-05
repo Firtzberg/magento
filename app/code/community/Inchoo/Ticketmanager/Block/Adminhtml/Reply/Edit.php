@@ -4,7 +4,7 @@
  *
  * @author Magento
  */
-class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
 {
     /**
      * Initialize edit form container
@@ -12,14 +12,22 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
      */
     public function __construct()
     {
-        $this->_objectId   = 'ticket_id';
+        $this->_objectId   = 'reply_id';
         $this->_blockGroup = 'inchoo_ticketmanager';
-        $this->_controller = 'adminhtml_ticket';
+        $this->_controller = 'adminhtml_reply';
 
         parent::__construct();
 
+        $model = Mage::getModel('inchoo_ticketmanager/reply')->load($this->getRequest()->getParam('id'));
+        if($model->getId()){
+            $this->_addButton('to_ticket',array(
+                'label' => Mage::helper('adminhtml')->__('Back to Ticket'),
+                'onclick' => "setLocation('".$this->getUrl('*/ticket/edit', array('id' => $model->getData('ticket_id')))."')",
+            ),0,100);
+        }
+
         if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('save')) {
-            $this->_updateButton('save', 'label', Mage::helper('inchoo_ticketmanager')->__('Save Ticket Item'));
+            $this->_updateButton('save', 'label', Mage::helper('inchoo_ticketmanager')->__('Save Reply Item'));
             $this->_addButton('saveandcontinue', array(
                 'label'   => Mage::helper('adminhtml')->__('Save and Continue Edit'),
                 'onclick' => 'saveAndContinueEdit()',
@@ -30,15 +38,10 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
         }
 
         if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('delete')) {
-            $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Ticket Item'));
+            $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Reply Item'));
         } else {
             $this->_removeButton('delete');
         }
-
-        $this->_addButton('reply', array(
-            'label' => Mage::helper('adminhtml')->__('Reply to Ticket'),
-            'onclick' => "setLocation('".$this->getUrl('*/reply/new', array('id' => $this->getRequest()->getParam('id')))."')",
-        ), 0, 100);
 
         $this->_formScripts[] = "
             function toggleEditor() {
@@ -62,12 +65,12 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
      */
     public function getHeaderText()
     {
-        $model = Mage::helper('inchoo_ticketmanager')->getTicketItemInstance();
+        $model = Mage::helper('inchoo_ticketmanager')->getReplyItemInstance();
         if ($model->getId()) {
-            return Mage::helper('inchoo_ticketmanager')->__("Edit Ticket Item '%s'",
+            return Mage::helper('inchoo_ticketmanager')->__("Edit Reply Item '%s'",
                 $this->escapeHtml($model->getSubject()));
         } else {
-            return Mage::helper('inchoo_ticketmanager')->__('New Ticket Item');
+            return Mage::helper('inchoo_ticketmanager')->__('New Reply Item');
         }
     }
 }

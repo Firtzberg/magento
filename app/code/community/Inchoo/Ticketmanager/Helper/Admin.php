@@ -16,4 +16,12 @@ class Inchoo_Ticketmanager_Helper_Admin  extends Mage_Core_Helper_Abstract{
         return Mage::getSingleton('Admin/session')->isAllowed('ticket/manage/'.$action);
     }
 
+    /**
+     * @param string $action
+     * @return bool
+     */
+    public function isReplyActionAllowed($action){
+        return Mage::getSingleton('Admin/session')->isAllowed('reply/manage/'.$action);
+    }
+
 } 

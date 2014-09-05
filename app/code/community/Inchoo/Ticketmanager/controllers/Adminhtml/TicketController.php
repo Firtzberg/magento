@@ -128,7 +128,7 @@ class Inchoo_Ticketmanager_Adminhtml_TicketController extends Mage_adminhtml_Con
         if ($itemId) {
             try {
                 // init model and delete
-                /** @var $model Inchoo_Ticketmanager_Model_Item */
+                /** @var $model Inchoo_Ticketmanager_Model_Ticket */
                 $model = Mage::getModel('inchoo_ticketmanager/ticket');
                 $model->load($itemId);
                 if (!$model->getId()) {
