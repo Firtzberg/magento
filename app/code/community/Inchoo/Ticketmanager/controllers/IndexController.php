@@ -123,6 +123,14 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
             }
             $model->addData($data);
 
+            //backend validation
+            if((!$model->hasSubject() || !$model->hasMessage()) || ($model->getSubject() == '' || $model->getMessage() == ''))
+            {
+                $session->setFormData($data);
+                $session->addError('Please, fill all required fields.');
+                return $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
+            }
+
             try {
                 $hasError = false;
 

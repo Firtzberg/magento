@@ -35,25 +35,25 @@
       <file leaf-file-name="Form.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="38" selection-start="671" selection-end="671" vertical-scroll-proportion="0.5690377" vertical-offset="0" max-vertical-offset="717">
+            <state line="21" column="0" selection-start="563" selection-end="563" vertical-scroll-proportion="0.49790794" vertical-offset="0" max-vertical-offset="717">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/reply/form.phtml">
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="10" selection-start="932" selection-end="932" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="476">
+            <state line="124" column="0" selection-start="4160" selection-end="4160" vertical-scroll-proportion="-12.923077" vertical-offset="1772" max-vertical-offset="4267">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php">
+      <file leaf-file-name="Reply.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="670" selection-end="670" vertical-scroll-proportion="-12.230769" vertical-offset="107" max-vertical-offset="3434">
+            <state line="19" column="10" selection-start="488" selection-end="488" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -63,15 +63,6 @@
         <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="36" selection-start="516" selection-end="516" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="77" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-10.576923" vertical-offset="405" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -123,7 +114,6 @@
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/sql/inchoo_ticketmanager_setup/upgrade-1.0.2-1.0.3.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Model/Ticket.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/etc/system.xml" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Helper/Admin.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Tabs.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Form.php" />
@@ -140,7 +130,6 @@
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Grid2.php" />
         <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/layout/inchoo_ticketmanager.xml" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tabs.php" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Grid.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/reply/list.phtml" />
@@ -152,10 +141,12 @@
         <option value="$PROJECT_DIR$/lib/Varien/Db/Adapter/Pdo/Mysql.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/ticket/form.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/reply/form.phtml" />
-        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php" />
         <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php" />
       </list>
     </option>
   </component>
@@ -1298,11 +1289,6 @@
         <state line="18" column="23" selection-start="352" selection-end="352" vertical-scroll-proportion="-4.0384617" vertical-offset="201" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="488" selection-end="488" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="544" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="743" />
@@ -1348,11 +1334,6 @@
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit/Tabs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.47419804" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="95" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.6933535" vertical-offset="255" max-vertical-offset="1309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/ReplyController.php">
@@ -1476,13 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="33" selection-start="4672" selection-end="4672" vertical-scroll-proportion="1.1380754" vertical-offset="1530" max-vertical-offset="4131">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Varien/Db/Adapter/Pdo/Mysql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="43" selection-start="2751" selection-end="2756" vertical-scroll-proportion="1.8730823" vertical-offset="0" max-vertical-offset="66759">
@@ -1516,34 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/reply/form.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="932" selection-end="932" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="670" selection-end="670" vertical-scroll-proportion="-12.230769" vertical-offset="107" max-vertical-offset="3434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="516" selection-end="516" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="77" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-10.576923" vertical-offset="405" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Grid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="26" selection-start="1819" selection-end="1819" vertical-scroll-proportion="-39.23077" vertical-offset="0" max-vertical-offset="2533">
@@ -1565,9 +1511,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="10" selection-start="488" selection-end="488" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="77" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.9483961" vertical-offset="0" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="36" selection-start="516" selection-end="516" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/Adminhtml/TicketController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="24" selection-start="2393" selection-end="2394" vertical-scroll-proportion="1.2870514" vertical-offset="637" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="4160" selection-end="4160" vertical-scroll-proportion="-12.923077" vertical-offset="1772" max-vertical-offset="4267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/controllers/ReplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.5114943" vertical-offset="545" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/inchoo/ticketmanager/reply/form.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="10" selection-start="932" selection-end="932" vertical-scroll-proportion="0.37935844" vertical-offset="0" max-vertical-offset="717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/Inchoo/Ticketmanager/Block/Adminhtml/Reply/Edit/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="671" selection-end="671" vertical-scroll-proportion="0.5690377" vertical-offset="0" max-vertical-offset="717">
+        <state line="21" column="0" selection-start="563" selection-end="563" vertical-scroll-proportion="0.49790794" vertical-offset="0" max-vertical-offset="717">
           <folding />
         </state>
       </provider>

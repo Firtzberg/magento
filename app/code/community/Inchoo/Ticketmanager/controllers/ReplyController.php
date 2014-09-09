@@ -44,6 +44,14 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
             ));
 
             $session = Mage::getSingleton('core/session');
+
+            //backend validation
+            if(!$model->hasContent() || $model->getContent() == ''){
+                $session->setFormData($data);
+                $session->addError('Please, fill all required fields.');
+                return $this->_redirect('*/index/view', array('id' => $this->getRequest()->getParam('ticket_id')));
+            }
+
             try {
                 $model->save();
 
