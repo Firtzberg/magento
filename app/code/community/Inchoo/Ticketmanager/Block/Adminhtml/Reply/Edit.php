@@ -12,7 +12,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit extends Mage_Adminhtml_Blo
      */
     public function __construct()
     {
-        $this->_objectId   = 'reply_id';
+        $this->_objectId   = 'id';
         $this->_blockGroup = 'inchoo_ticketmanager';
         $this->_controller = 'adminhtml_reply';
 
@@ -22,7 +22,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit extends Mage_Adminhtml_Blo
         $ticket_id = $this->getRequest()->getParam('ticket_id');
         if(!$ticket_id){
             //if reply is edited
-            $model = Mage::getModel('inchoo_ticketmanager/reply')->load($this->getRequest()->getParam('id'));
+            $model = Mage::getModel('inchoo_ticketmanager/reply')->load($this->getRequest()->getParam($this->_objectId));
             if($model->getId()){
                 //reply really exists
                 $ticket_id = $model->getData('ticket_id');

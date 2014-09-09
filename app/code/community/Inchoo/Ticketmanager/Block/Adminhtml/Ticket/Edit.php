@@ -12,7 +12,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
      */
     public function __construct()
     {
-        $this->_objectId   = 'ticket_id';
+        $this->_objectId   = 'id';
         $this->_blockGroup = 'inchoo_ticketmanager';
         $this->_controller = 'adminhtml_ticket';
 
@@ -29,15 +29,16 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
             $this->_removeButton('save');
         }
 
-        if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('delete')) {
+        /*if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('delete')) {
             $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Ticket Item'));
         } else {
             $this->_removeButton('delete');
-        }
+        }*/
+        $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Ticket Item'));
 
         $this->_addButton('reply', array(
             'label' => Mage::helper('adminhtml')->__('Reply to Ticket'),
-            'onclick' => "setLocation('".$this->getUrl('*/reply/new', array('ticket_id' => $this->getRequest()->getParam('id')))."')",
+            'onclick' => "setLocation('".$this->getUrl('*/reply/new', array('ticket_id' => $this->getRequest()->getParam($this->_objectId)))."')",
         ), 0, 100);
 
         $this->_formScripts[] = "

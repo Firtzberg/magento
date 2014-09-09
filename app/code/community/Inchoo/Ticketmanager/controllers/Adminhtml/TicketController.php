@@ -25,11 +25,6 @@ class Inchoo_Ticketmanager_Adminhtml_TicketController extends Mage_adminhtml_Con
 		$this->renderLayout();
 	}
 
-	public function newAction()
-	{
-		$this->_forward('edit');
-	}
-
 	public function editAction()
 	{
 		$this->_title($this->__('Tickets'))
