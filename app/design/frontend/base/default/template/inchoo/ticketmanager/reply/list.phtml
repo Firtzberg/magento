@@ -1,14 +1,15 @@
 <?php $replyCount = $this->getCollection()->count();?>
 <?php if($replyCount > 0): ?>
     <h3>Replies - Total <?php echo $replyCount ?></h3>
+    <?php echo $this->getPagerHtml() ?>
+    <?php foreach ($this->getCollection() as $_reply): ?>
+        <div>
+            Time: <?php echo $_reply->getData('created_at') ?>
+            <div>
+                <?php echo nl2br($this->escapeHtml($_reply->getData('content'))) ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
 <?php else: ?>
     <h3>No replies</h3>
 <?php endif;?>
-<?php foreach ($this->getCollection() as $_reply): ?>
-    <div>
-        Time: <?php echo $_reply->getData('created_at') ?>
-        <div>
-            <?php echo nl2br($this->escapeHtml($_reply->getData('content'))) ?>
-        </div>
-    </div>
-<?php endforeach; ?>

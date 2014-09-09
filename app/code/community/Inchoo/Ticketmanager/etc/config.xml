@@ -84,7 +84,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <Inchoo_Ticketmanager before="Mage_Adminhtml">Inchoo_Ticketmanager_Adminhtml</Inchoo_Ticketmanager>
+                        <Inchoo_Ticketmanager after="Mage_Adminhtml">Inchoo_Ticketmanager_Adminhtml</Inchoo_Ticketmanager>
                     </modules>
                 </args>
             </adminhtml>
@@ -103,8 +103,8 @@
         <ticket>
             <view>
                 <enabled>1</enabled>
-                <items_per_page>20</items_per_page>
-                <replies_per_page>20</replies_per_page>
+                <items_per_page>10</items_per_page>
+                <replies_per_page>10</replies_per_page>
                 <edit_ticket_enabled>0</edit_ticket_enabled>
             </view>
         </ticket>

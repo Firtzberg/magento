@@ -31,4 +31,23 @@ class Inchoo_Ticketmanager_Block_Reply_List extends Mage_Core_Block_Template
         }
         return $this->_collection;
     }
+
+    function _prepareLayout() {
+
+        $pager = $this->getLayout()->createBlock('page/html_pager', 'reply.pager');
+        $repliesPerPage = Mage::helper('inchoo_ticketmanager')->getRepliesPerPage();
+        $pager->setAvailableLimit(array($repliesPerPage => $repliesPerPage));
+
+        $this->setChild('pager', $pager);
+        parent::_prepareLayout();
+    }
+
+    function _toHtml() {
+        $this->getChild('pager')->setCollection($this->getCollection());
+        return parent::_toHtml();
+    }
+
+    public function getPagerHtml() {
+        return $this->getChildHtml('pager');
+    }
 }

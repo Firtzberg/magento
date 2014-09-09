@@ -29,9 +29,9 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
     {
         $collection = Mage::getModel('inchoo_ticketmanager/ticket')->getResourceCollection();
         $collection->getSelect()->joinLeft(
-            array('ws' => Mage::getSingleton('core/resource')->getTableName('core/website')),
-            'main_table.website_id=ws.website_id',
-            array('website_name' => 'name'));
+        array('ws' => Mage::getSingleton('core/resource')->getTableName('core/website')),
+        'main_table.website_id=ws.website_id',
+        array('website_name' => 'name'));
 
         $attributes = array('firstname', 'middlename', 'lastname');
         foreach($collection as $item){

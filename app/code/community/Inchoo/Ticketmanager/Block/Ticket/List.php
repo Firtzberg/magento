@@ -45,20 +45,23 @@ class Inchoo_Ticketmanager_Block_Ticket_List extends Mage_Core_Block_Template
     	return $this->getData('current_page') ? $this->getData('current_page') : 1;
     }
 
-    public function getPager()
-    {
-    	$pager = $this->getChild('ticket_list_pager');
-    	if($pager){
-    		$ticketsPerPage = Mage::helper('inchoo_ticketmanager')->getTicketsPerPage();
+    function _prepareLayout() {
 
-    		$pager->setAvailableLimit(array($ticketsPerPage => $ticketsPerPage));
-    		$pager->setTotalNum($this->getCollection());
-    		$pager->setShowPerPage(true);
+        $pager = $this->getLayout()->createBlock('page/html_pager', 'ticket.pager');
+        $ticketsPerPage = Mage::helper('inchoo_ticketmanager')->getTicketsPerPage();
+        $pager->setAvailableLimit(array($ticketsPerPage => $ticketsPerPage));
 
-    		return $pager->toHtml();
-    	}
+        $this->setChild('pager', $pager);
+        parent::_prepareLayout();
+    }
 
-    	return null;
+    function _toHtml() {
+        $this->getChild('pager')->setCollection($this->getCollection());
+        return parent::_toHtml();
+    }
+
+    public function getPagerHtml() {
+        return $this->getChildHtml('pager');
     }
 
     /**

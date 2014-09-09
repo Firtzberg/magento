@@ -3,6 +3,7 @@
 	<h1><?php echo Mage::helper('inchoo_ticketmanager')->__("Tickets") ?></h1>
 </div>
 <div><a href="<?php echo Mage::getUrl("ticket/index/new") ?>">Add new Ticket</a></div>
+<?php echo $this->getPagerHtml(); ?>
 <div>
 	<?php foreach ($this->getCollection() as $ticketItem): ?>
 		<div id="item_<?php echo $ticketItem->getId() ?>">

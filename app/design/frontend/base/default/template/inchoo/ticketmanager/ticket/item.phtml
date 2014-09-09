@@ -17,10 +17,10 @@
                 <?php echo Mage::helper('inchoo_ticketmanager')->__('Edit Ticket') ?>
             </a>
         <?php endif; ?>
-        <div><?php echo $this->getChildHtml('reply.list'); ?></div>
         <?php if($_ticketItem->isOpen()):?>
-        <div><?php echo $this->getChildHtml('reply.form'); ?></div>
+            <div><?php echo $this->getChildHtml('reply.form'); ?></div>
         <?php endif; ?>
+        <div><?php echo $this->getChildHtml('reply.list'); ?></div>
         <a href="<?php echo $this->getBackUrl() ?>">
             <?php echo Mage::helper('inchoo_ticketmanager')->__('Return to list') ?>
         </a>
