@@ -1,20 +1,46 @@
 <div id="ticket_list_messages"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div>
+<div class="page-title title-buttons">
 	<h1><?php echo Mage::helper('inchoo_ticketmanager')->__("Tickets") ?></h1>
+    <a href="<?php echo Mage::getUrl("ticket/index/new") ?>"><?php echo Mage::helper('inchoo_ticketmanager')->__("Add new Ticket") ?></a>
 </div>
-<div><a href="<?php echo Mage::getUrl("ticket/index/new") ?>">Add new Ticket</a></div>
 <?php echo $this->getPagerHtml(); ?>
-<div>
-	<?php foreach ($this->getCollection() as $ticketItem): ?>
-		<div id="item_<?php echo $ticketItem->getId() ?>">
-			<h4>
-				<a href="<?php echo $this->getItemUrl($ticketItem) ?>">
-					<?php echo $this->escapeHtml($ticketItem->getSubject()) ?>
-				</a>
-                (<?php echo $ticketItem->getRepliesCount() ?>)-<?php echo Mage::helper('inchoo_ticketmanager')->__($ticketItem->getStatus())?>
-			</h4>
-		</div>
-	<?php endforeach; ?>
-</div>
+<?php if($this->getCollection()->getSize()): ?>
+<table class="data-table" id="my-tickets-table">
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <thead>
+    <tr>
+        <th><?php echo $this->__('Ticket #') ?></th>
+        <th><?php echo $this->__('Subject') ?></th>
+        <th><?php echo $this->__('Date') ?></th>
+        <th><span class="nobr"><?php echo $this->__('Total Replies') ?></span></th>
+        <th><span class="nobr"><?php echo $this->__('Ticket Status') ?></span></th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->getCollection() as $ticketItem): ?>
+        <tr>
+            <td><?php echo $ticketItem->getId() ?></td>
+            <td><?php echo $ticketItem->getSubject() ?></td>
+            <td><span class="nobr"><?php echo $this->formatDate($ticketItem->getCreatedAtStoreDate()) ?></span></td>
+            <td><?php echo $ticketItem->getRepliesCount() ?></td>
+            <td><em><?php echo $ticketItem->getStatus() ?></em></td>
+            <td class="a-center"><span class="nobr"><a href="<?php echo $this->getItemUrl($ticketItem) ?>"><?php echo $this->__('View Ticket') ?></a></span></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript">decorateTable('my-tickets-table');</script>
 
-<?php echo $this->getPager() ?>
+<?php echo $this->getPagerHtml() ?>
+<div class="buttons-set">
+    <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+</div>
+<?php else:?>
+    <p><?php echo $this->__('You have no tickets.'); ?></p>
+<?php endif?>

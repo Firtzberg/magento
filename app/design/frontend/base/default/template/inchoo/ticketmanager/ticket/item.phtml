@@ -1,28 +1,32 @@
 <?php $_ticketItem = $this->helper('inchoo_ticketmanager')->getTicketItemInstance(); ?>
 <div id="ticket_item_messages"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 
-<div>
-	<h1><?php echo $this->escapeHtml($_ticketItem->getSubject()) ?></h1>
-    <p><?php echo Mage::helper('inchoo_ticketmanager')->__('Asked by')?> <?php echo $_ticketItem->getCustomer()->getName().' '.$_ticketItem->getCustomer()->getLastName()?></p>
-    <?php echo Mage::helper('inchoo_ticketmanager')->__('Status:') ?> <?php echo Mage::helper('inchoo_ticketmanager')->__($_ticketItem->getStatus()) ?>
+<div class="page-title title-buttons">
+    <h1><?php echo $this->escapeHtml($_ticketItem->getSubject()) ?> - <?php echo $_ticketItem->getStatus()?></h1>
     <?php if($_ticketItem->isOpen()):?>
-        <a href="<?php echo Mage::getUrl('ticket/index/close', array('id' => $_ticketItem->getId()))?>"><?php
-        echo Mage::helper('inchoo_ticketmanager')->__('Close Ticket');
-            ?></a>
-    <?php endif; ?>
-	<div>
-		<div><?php echo nl2br($this->escapeHtml($_ticketItem->getMessage())) ?></div>
+    <a href="<?php echo Mage::getUrl('ticket/index/close', array('id' => $_ticketItem->getId()))?>"><?php
+        echo Mage::helper('inchoo_ticketmanager')->__('Close Ticket');?></a>
         <?php if(Mage::helper('inchoo_ticketmanager')->getEditTicketEnabled()): ?>
+            <span class="separator">|</span>
             <a href="<?php echo $this->getEditUrl() ?>">
                 <?php echo Mage::helper('inchoo_ticketmanager')->__('Edit Ticket') ?>
             </a>
         <?php endif; ?>
-        <?php if($_ticketItem->isOpen()):?>
-            <div><?php echo $this->getChildHtml('reply.form'); ?></div>
-        <?php endif; ?>
-        <div><?php echo $this->getChildHtml('reply.list'); ?></div>
-        <a href="<?php echo $this->getBackUrl() ?>">
-            <?php echo Mage::helper('inchoo_ticketmanager')->__('Return to list') ?>
-        </a>
-	</div>
+    <?php endif; ?>
 </div>
+<p class="ticket-asked"><?php
+    if(Mage::getSingleton('customer/session')->getCustomer()->getId() == $_ticketItem->getData('customer_id'))
+        echo 'Asked by You ';
+    else echo 'Asked by<strong>$_ticketItem->getCustomer()->getName()</strong> ';
+    echo $_ticketItem->getData('created_at');
+    ?></p>
+<div class="ticket-message"><?php echo nl2br($this->escapeHtml($_ticketItem->getMessage()))?></div>
+<div id="reply-container">
+    <?php if($_ticketItem->isOpen()):?>
+        <div><?php echo $this->getChildHtml('reply.form'); ?></div>
+    <?php endif; ?>
+    <div><?php echo $this->getChildHtml('reply.list'); ?></div>
+</div>
+<div class="buttons-set"><p class="back-link"><a href="<?php echo $this->getBackUrl() ?>"><small>« </small>
+    <?php echo Mage::helper('inchoo_ticketmanager')->__('Return to My Tickets') ?>
+</a></p></div>

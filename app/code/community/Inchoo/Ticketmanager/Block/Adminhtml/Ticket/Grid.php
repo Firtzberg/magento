@@ -27,25 +27,13 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
      */
     protected function _prepareCollection()
     {
+        $wanted = array('firstname', 'middlename', 'lastname');
+        /**
+         * @var Inchoo_Ticketmanager_Model_Resource_Ticket_Collection
+         */
         $collection = Mage::getModel('inchoo_ticketmanager/ticket')->getResourceCollection();
-        $collection->getSelect()->joinLeft(
-        array('ws' => Mage::getSingleton('core/resource')->getTableName('core/website')),
-        'main_table.website_id=ws.website_id',
-        array('website_name' => 'name'));
-
-        $attributes = array('firstname', 'middlename', 'lastname');
-        foreach($collection as $item){
-            $customer = Mage::getModel('customer/customer')
-                    ->load($item->getData('customer_id'));
-            $str = '';
-            foreach($attributes as $attribute){
-                if($customer->getData($attribute) != null){
-                    $str .= ' ';
-                    $str .= $customer->getData($attribute);
-                }
-            }
-            $item->setData('customer_name', trim($str));
-        }
+        $collection->includeWebsiteNames();
+        $collection = Mage::helper('inchoo_ticketmanager')->joinCustomerNameToFlatTable($collection);
 
         $this->setCollection($collection);
         return parent::_prepareCollection();
@@ -72,15 +60,13 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Grid extends Mage_Adminhtml_Bl
         $this->addColumn('customer_name', array(
             'header'    => Mage::helper('inchoo_ticketmanager')->__('Customer'),
             'index'     => 'customer_name',
-            'filter'    => false,
-            'sortable'=> false
+            'filter' => false
         ));
 
         $this->addColumn('website_name', array(
             'header'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
             'index'     => 'website_name',
-            'sortable'  => false,
-            'filter'    => false
+            'filter_index' => 'ws.name'
         ));
 
         $this->addColumn('created_at', array(

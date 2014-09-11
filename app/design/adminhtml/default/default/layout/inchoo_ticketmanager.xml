@@ -29,31 +29,11 @@
         <reference name="left">
             <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tabs" name="ticket_edit_tabs">
                 <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tab_main" name="ticket_edit_tab_main" />
-                <block type="inchoo_ticketmanager/adminhtml_ticket_edit_tab_message" name="ticket_edit_tab_message" />
                 <action method="addTab"><name>main_section</name><block>ticket_edit_tab_main</block></action>
-                <action method="addTab"><name>content_section</name><block>ticket_edit_tab_message</block></action>
+                <action method="setActiveTab"><name>main_section</name></action>
             </block>
         </reference>
     </adminhtml_ticket_edit>
-
-    <!--<adminhtml_ticket_replies>
-        <block type="core/text_list" name="replies_root" output="toHtml">
-            <block type="inchoo_ticketmanager/adminhtml_reply_grid" name="reply_grid"/>
-            <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
-                <reference name="grid_serializer">
-                    <action method="initSerializerBlock">
-                        <grid_block_name>reply_grid</grid_block_name>
-                        <data_callback>gerSelectedReplies</data_callback>
-                        <hidden_input_name>links[replies]</hidden_input_name>
-                        <reload_para_name>replies</reload_para_name>
-                    </action>
-                    <action method="addColumnInputName">
-                        <input_name>position</input_name>
-                    </action>
-                </reference>
-            </block>
-        </block>
-    </adminhtml_ticket_replies>-->
 
     <adminhtml_reply_index>
         <reference name="content">

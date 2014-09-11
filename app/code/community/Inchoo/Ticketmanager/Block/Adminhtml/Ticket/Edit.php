@@ -29,11 +29,6 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit extends Mage_Adminhtml_Bl
             $this->_removeButton('save');
         }
 
-        /*if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('delete')) {
-            $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Ticket Item'));
-        } else {
-            $this->_removeButton('delete');
-        }*/
         $this->_updateButton('delete', 'label', Mage::helper('inchoo_ticketmanager')->__('Delete Ticket Item'));
 
         $this->_addButton('reply', array(

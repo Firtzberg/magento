@@ -22,6 +22,14 @@ class Inchoo_Ticketmanager_Block_Reply_List extends Mage_Core_Block_Template
         $this->_collection = Mage::getModel('inchoo_ticketmanager/reply')
             ->getCollection()
             ->addFieldToFilter('ticket_id', $this->getTicket()->getId());
+        $this->_collection->getSelect()
+            ->joinLeft(
+                array('ad' => 'admin_user'),
+                'ad.user_id=main_table.admin_id',
+                array('admin_name' => "concat(ad.firstname,' ', ad.lastname)")
+            );
+        $this->_collection = Mage::helper('inchoo_ticketmanager')->joinCustomerNameToFlatTable($this->_collection);
+        $this->_collection->prepareForList($this->getCurrentPage());
         return $this->_collection;
     }
 

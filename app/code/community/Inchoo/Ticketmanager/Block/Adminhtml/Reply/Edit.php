@@ -32,8 +32,10 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit extends Mage_Adminhtml_Blo
             $this->_addButton('to_ticket',array(
                 'label' => Mage::helper('adminhtml')->__('Back to Ticket'),
                 'onclick' => "setLocation('".$this->getUrl('*/ticket/edit', array('id' => $ticket_id))."')",
-            ),0,100);
+            ),0,-501);
         }
+
+        $this->removeButton('back');
 
         if (Mage::helper('inchoo_ticketmanager/admin')->isActionAllowed('save')) {
             $this->_updateButton('save', 'label', Mage::helper('inchoo_ticketmanager')->__('Save Reply Item'));

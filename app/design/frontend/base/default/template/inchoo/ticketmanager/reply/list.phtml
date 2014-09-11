@@ -1,15 +1,28 @@
 <?php $replyCount = $this->getCollection()->count();?>
 <?php if($replyCount > 0): ?>
-    <h3>Replies - Total <?php echo $replyCount ?></h3>
+    <h2>Replies</h2>
     <?php echo $this->getPagerHtml() ?>
+    <div class="reply-list">
     <?php foreach ($this->getCollection() as $_reply): ?>
-        <div>
-            Time: <?php echo $_reply->getData('created_at') ?>
-            <div>
+        <div class="reply-item"><div class="reply-header"><div class="reply-time">
+            <?php $time = new DateTime($_reply->getData('created_at'));
+            $interval = (new DateTime())->diff($time);
+            if($interval->days < 3)
+                echo 'Time: '.$time->format('Y-m-d H:i:s');
+            else echo 'Time: '.$time->format('Y-m-d') ?></div>
+            <div class="<?php if($_reply->getData('isAdmin'))echo 'admin-reply';else echo 'customer-reply'?>">
+                <?php
+                if($_reply->getData('isAdmin'))
+                    echo 'Admin <strong>'.$_reply->getData('admin_name').'</strong> says';
+                else echo '<strong>'.$_reply->getData('customer_name').'</strong> says';
+                ?></div></div>
+            <div class="reply-content">
                 <?php echo nl2br($this->escapeHtml($_reply->getData('content'))) ?>
             </div>
         </div>
     <?php endforeach; ?>
+    </div>
+    <?php echo $this->getPagerHtml() ?>
 <?php else: ?>
-    <h3>No replies</h3>
+    <h2>No replies</h2>
 <?php endif;?>

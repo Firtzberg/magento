@@ -54,6 +54,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit_Tab_Main
             'label'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
             'title'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
             'readonly' => true,
+            'disabled' => true,
         ));
 
         $fieldset->addField('status', 'select', array(
@@ -75,7 +76,21 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Ticket_Edit_Tab_Main
             'label'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
             'title'    => Mage::helper('inchoo_ticketmanager')->__('Website'),
             'disabled' => $isElementDisabled,
-            'readonly' => true
+            'readonly' => true,
+            'disabled' => true,
+        ));
+
+        $fieldset = $form->addFieldset('message_fieldset', array(
+            'legend' => Mage::helper('inchoo_ticketmanager')->__('Message'),
+            'class'  => 'fieldset-wide'
+        ));
+
+        $fieldset->addField('message', 'textarea', array(
+            'label'    => Mage::helper('inchoo_ticketmanager')->__('Message'),
+            'title'    => Mage::helper('inchoo_ticketmanager')->__('Message'),
+            'name'     => 'message',
+            'required' => true,
+            'disabled' => $isElementDisabled,
         ));
 
         $fieldset = $form->addFieldset('customer_fieldset', array(

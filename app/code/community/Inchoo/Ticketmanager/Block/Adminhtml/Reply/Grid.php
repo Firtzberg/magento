@@ -31,28 +31,26 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Grid extends Mage_Adminhtml_Blo
         if($this->getRequest()->getParam('id')){
             $collection->addFieldToFilter('ticket_id', $this->getRequest()->getParam('id'));
         }
-
-        $attributes = array('firstname', 'middlename', 'lastname');
-        $replier = null;
-        foreach($collection as $item){
-            $str = '';
-            if($item->getData('isAdmin') == 1){
-                $replier = Mage::getModel('admin/user')
-                    ->load($item->getData('admin_id'));
-            }else{
-                $replier = Mage::getModel('customer/customer')
-                    ->load($item->getData('customer_id'));
-            }
-            foreach($attributes as $attribute){
-                if($replier->getData($attribute) != null){
-                    $str .= ' ';
-                    $str .= $replier->getData($attribute);
-                }
-            }
-            $item->setData('replier_name', trim($str));
-        }
+        $collection->getSelect()
+            ->joinLeft(
+            array('ad' => 'admin_user'),
+                'ad.user_id=main_table.admin_id',
+                array('admin_name' => "concat(ad.firstname,' ', ad.lastname)")
+            );
+        $collection = Mage::helper('inchoo_ticketmanager')->joinCustomerNameToFlatTable($collection, 'customer_id');
         $this->setCollection($collection);
         return parent::_prepareCollection();
+    }
+
+    protected function _afterLoadCollection(){
+        $collection = $this->getCollection();
+        $replier = null;
+        foreach($collection as $item){
+            if($item->getData('isAdmin') == 0)
+                $item->setData('replier_name', $item->getData('customer_name'));
+            else $item->setData('replier_name', $item->getData('admin_name'));
+        }
+        return parent::_afterLoadCollection();
     }
 
     /**
@@ -65,7 +63,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Grid extends Mage_Adminhtml_Blo
         $this->addColumn('reply_id', array(
             'header'    => Mage::helper('inchoo_ticketmanager')->__('ID'),
             'width'     => '50px',
-            'index'     => 'reply_id',
+            'index'     => 'reply_id'
         ));
 
         $this->addColumn('content', array(
@@ -123,6 +121,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Grid extends Mage_Adminhtml_Blo
     /**
      * Return row URL for js event handlers
      *
+     * @param row
      * @return string
      */
     public function getRowUrl($row)

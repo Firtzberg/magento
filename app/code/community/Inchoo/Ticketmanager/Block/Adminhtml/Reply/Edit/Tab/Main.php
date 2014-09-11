@@ -63,6 +63,7 @@ class Inchoo_Ticketmanager_Block_Adminhtml_Reply_Edit_Tab_Main
             'label'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
             'title'    => Mage::helper('inchoo_ticketmanager')->__('Created'),
             'readonly' => true,
+            'disabled' => true,
         ));
 
         $fieldset = $form->addFieldset('replier_fieldset', array(

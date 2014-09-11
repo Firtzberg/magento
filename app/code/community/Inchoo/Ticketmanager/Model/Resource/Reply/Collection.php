@@ -8,12 +8,10 @@ class Inchoo_Ticketmanager_Model_Resource_Reply_Collection extends Mage_Core_Mod
     }
 
     public function prepareForList($page){
-        /*
         $this->setPageSize(Mage::helper('inchoo_ticketmanager')
-            ->getTicketsPerPage());
+            ->getRepliesPerPage());
         $this->setCurPage($page)
             ->setOrder('created_at', Varien_Data_Collection::SORT_ORDER_DESC);
-        */
         return $this;
     }
 }

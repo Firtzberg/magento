@@ -187,7 +187,9 @@ class Inchoo_Ticketmanager_Adminhtml_TicketController extends Mage_adminhtml_Con
     public function gridAction()
     {
         $this->loadLayout();
-        $this->renderLayout();
+        $this->getResponse()->setBody(
+            $this->getLayout()->createBlock('inchoo_ticketmanager/adminhtml_ticket_grid')->toHtml()
+        );
     }
 
     public function flushAction()

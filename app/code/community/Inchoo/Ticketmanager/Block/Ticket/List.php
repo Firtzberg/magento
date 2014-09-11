@@ -23,7 +23,8 @@ class Inchoo_Ticketmanager_Block_Ticket_List extends Mage_Core_Block_Template
     {
         if (is_null($this->_ticketCollection)) {
             $this->_ticketCollection = Mage::getResourceModel('inchoo_ticketmanager/ticket_collection')
-            ->addFieldToFilter('website_id', Mage::app()->getWebsite()->getId());
+            ->addFieldToFilter('website_id', Mage::app()->getWebsite()->getId())
+            ->addFieldToFilter('customer_id', Mage::getSingleton('customer/session')->getId());
             $this->_ticketCollection->prepareForList($this->getCurrentPage());
         }
 
