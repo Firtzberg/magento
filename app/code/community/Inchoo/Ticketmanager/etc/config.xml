@@ -3,7 +3,7 @@
 <config>
 	<modules>
 		<Inchoo_Ticketmanager>
-			<version>1.0.4</version>
+			<version>1.0.5</version>
 		</Inchoo_Ticketmanager>
 	</modules>
 	<global>
@@ -51,6 +51,25 @@
                 </observers>
             </before_ticket_item_displayed>
         </events>
+        <template>
+            <email>
+                <inchoo_ticketmanager_ticket_posted_email module="inchoo_ticketmanager" translate="label">
+                    <label>New Ticket Email to Admin</label>
+                    <file>ticketmanager_new_ticket_email_admin.html</file>
+                    <type>html</type>
+                </inchoo_ticketmanager_ticket_posted_email>
+                <inchoo_ticketmanager_admin_reply_email module="inchoo_ticketmanager" translate="label">
+                    <label>New Reply Email to Admin</label>
+                    <file>ticketmanager_new_reply_email_admin.html</file>
+                    <type>html</type>
+                </inchoo_ticketmanager_admin_reply_email>
+                <inchoo_ticketmanager_customer_reply_email module="inchoo_ticketmanager" translate="label">
+                    <label>New Reply Email to Customer</label>
+                    <file>ticketmanager_new_reply_email_customer.html</file>
+                    <type>html</type>
+                </inchoo_ticketmanager_customer_reply_email>
+            </email>
+        </template>
 	</global>
     <frontend>
         <routers>
@@ -100,13 +119,33 @@
         </layout>
     </adminhtml>
     <default>
-        <ticket>
+        <inchoo_ticketmanager_ticket>
             <view>
                 <enabled>1</enabled>
                 <items_per_page>10</items_per_page>
                 <replies_per_page>10</replies_per_page>
                 <edit_ticket_enabled>0</edit_ticket_enabled>
+                <all_tickets_visible>0</all_tickets_visible>
+                <can_reply_all>0</can_reply_all>
             </view>
-        </ticket>
+        </inchoo_ticketmanager_ticket>
+        <inchoo_ticketmanager_email_settings>
+            <general>
+                <enabled>1</enabled>
+                <email_template>inchoo_ticketmanager_ticket_posted_email</email_template>
+            </general>
+            <new_ticket_email_settings>
+                <enabled>1</enabled>
+            </new_ticket_email_settings>
+            <customer_reply_email_settings>
+                <enabled>1</enabled>
+                <email_template>inchoo_ticketmanager_customer_reply_email</email_template>
+            </customer_reply_email_settings>
+            <admin_reply_email_settings>
+                <enabled>1</enabled>
+                <replier_enabled>1</replier_enabled>
+                <email_template>inchoo_ticketmanager_admin_reply_email</email_template>
+            </admin_reply_email_settings>
+        </inchoo_ticketmanager_email_settings>
     </default>
 </config>

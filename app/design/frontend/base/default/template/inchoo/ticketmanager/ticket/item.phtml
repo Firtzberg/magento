@@ -17,7 +17,7 @@
 <p class="ticket-asked"><?php
     if(Mage::getSingleton('customer/session')->getCustomer()->getId() == $_ticketItem->getData('customer_id'))
         echo 'Asked by You ';
-    else echo 'Asked by<strong>$_ticketItem->getCustomer()->getName()</strong> ';
+    else echo 'Asked by <strong>'.$_ticketItem->getCustomer()->getName().'</strong> ';
     echo $_ticketItem->getData('created_at');
     ?></p>
 <div class="ticket-message"><?php echo nl2br($this->escapeHtml($_ticketItem->getMessage()))?></div>

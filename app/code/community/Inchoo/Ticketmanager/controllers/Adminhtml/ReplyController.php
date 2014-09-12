@@ -93,7 +93,7 @@ class Inchoo_Ticketmanager_Adminhtml_ReplyController extends Mage_adminhtml_Cont
      */
     public function saveAction()
     {
-        $redirectPath   = '*/*';
+        $redirectPath   = '*/ticket/edit';
         $redirectParams = array();
 
         // check if data sent
@@ -119,7 +119,9 @@ class Inchoo_Ticketmanager_Adminhtml_ReplyController extends Mage_adminhtml_Cont
 
             $model = Mage::getModel('inchoo_ticketmanager/reply');
             $replyId = $this->getRequest()->getParam('reply_id');
+            $isNew = true;
             if($replyId){                //an existing reply has been edited
+                $isNew = false;
                 $model->load($replyId);
             }
             else{
@@ -136,6 +138,10 @@ class Inchoo_Ticketmanager_Adminhtml_ReplyController extends Mage_adminhtml_Cont
                 $this->_getSession()->addSuccess(
                     Mage::helper('inchoo_ticketmanager')->__('The Reply item has been saved.')
                 );
+
+                //let helper send emails
+                Mage::helper('inchoo_ticketmanager')->sendNewReplyEmailsOnReply($model);
+                $redirectParams = array('id' => $this->getRequest()->getParam('ticket_id'));
 
                 // check if 'Save and Continue'
                 if ($this->getRequest()->getParam('back')) {

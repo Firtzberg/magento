@@ -136,10 +136,14 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 
                 $model->save();
 
+                $redirectParams = array('id' => $model->getId());
+                //item saved successfully, if this item is new, send email to Admin
+                if($isNew)
+                    Mage::helper('inchoo_ticketmanager')->sendNewTicketEmailToAdmin($model);
+
                 $session->addSuccess(
                     Mage::helper('inchoo_ticketmanager')->__('The Ticket item has been saved.')
                 );
-                $redirectParams = array('id' => $model->getId());
             } catch (Mage_Core_Exception $e) {
                 $hasError = true;
                 $session->addError($e->getMessage());
@@ -181,7 +185,8 @@ class Inchoo_Ticketmanager_IndexController extends Mage_Core_Controller_Front_Ac
 			return $this->_forward('noRoute');
 		}
 
-        if($model->getData('customer_id') != Mage::getSingleton('customer/session')->getCustomer()->getId()){
+        if(!Mage::helper('inchoo_ticketmanager')->getAllTicketsVisible() &&
+            $model->getData('customer_id') != Mage::getSingleton('customer/session')->getCustomer()->getId()){
             return $this->_forward('noRoute');
         }
 

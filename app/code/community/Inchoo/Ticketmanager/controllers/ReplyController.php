@@ -21,26 +21,34 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
         $data = $this->getRequest()->getParams();
         if ($data) {
             $data = $this->_filterPostData($data);
-            // init model and set data
-            $model = Mage::getModel('inchoo_ticketmanager/reply');
 
+            //must have a ticket_id
             $ticketId = $this->getRequest()->getParam('ticket_id');
             if (!$ticketId) {
                 $this->_redirect('noRoute');
                 return;
             }
-            if(Mage::getModel('inchoo_ticketmanager/ticket')
-                ->getCollection()
-                ->addFieldToFilter('ticket_id', $ticketId)
-                ->count() < 1){
+            //according ticket must exsist
+            $model = Mage::getModel('inchoo_ticketmanager/ticket')->load( $ticketId);
+            if(!$model->getId()){
+                $this->_redirect('noRoute');
+                return;
+            }
+            //replying to all tickets is enabled or replier is ticket owner
+            $replier_id = Mage::getSingleton('customer/session')->getCustomer()->getId();
+            if(!Mage::helper('inchoo_ticketmanager')->getCustomerCanReplyAll()
+                && $model->getData('cusotmer_id') != $replier_id){
                 $this->_redirect('noRoute');
                 return;
             }
 
+            // init model and set data
+            $model = Mage::getModel('inchoo_ticketmanager/reply');
+
             $model->addData(array('ticket_id' => $data['ticket_id'],
                 'content' => $data['content'],
                 'isAdmin' => 0,
-                'customer_id' => Mage::getSingleton('customer/session')->getCustomer()->getId()
+                'customer_id' => $replier_id
             ));
 
             $session = Mage::getSingleton('core/session');
@@ -53,14 +61,20 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
             }
 
             try {
+                $hasError = false;
                 $model->save();
 
                 $session->addSuccess(
                     Mage::helper('inchoo_ticketmanager')->__('The Reply has been posted.')
                 );
+
+                //successfully saved, let helper send emails
+                Mage::helper('inchoo_ticketmanager')->sendNewReplyEmailsOnReply($model);
             } catch (Mage_Core_Exception $e) {
+                $hasError = true;
                 $session->addError($e->getMessage());
             } catch (Exception $e) {
+                $hasError = true;
                 $session->addException($e,
                     Mage::helper('inchoo_ticketmanager')->__('An error occurred while posting the reply.')
                 );

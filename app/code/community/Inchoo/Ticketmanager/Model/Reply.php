@@ -24,6 +24,6 @@ class Inchoo_Ticketmanager_Model_Reply extends Mage_Core_Model_Abstract {
                 return null;
             $this->_ticket = Mage::getModel('inchoo_ticketmanager/ticket')->load($ticketId);
         }
-        return $this->$_ticket;
+        return $this->_ticket;
     }
 }

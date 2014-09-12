@@ -64,9 +64,12 @@
 						<children>
 							<config>
 								<children>
-									<ticket translate="title" module="inchoo_ticketmanager">
-										<title>Ticket Management</title>
-									</ticket>
+                                    <inchoo_ticketmanager_ticket translate="title" module="inchoo_ticketmanager">
+                                        <title>Ticket Settings</title>
+                                    </inchoo_ticketmanager_ticket>
+                                    <inchoo_ticketmanager_email_settings translate="title" module="inchoo_ticketmanager">
+                                        <title>Tickets Email Settings</title>
+                                    </inchoo_ticketmanager_email_settings>
 								</children>
 							</config>
 						</children>

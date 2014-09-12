@@ -1,3 +1,4 @@
+<?php if(Mage::helper('inchoo_ticketmanager')->getCustomerCanReplyAll() || ($this->getTicket()->getData('cusotmer_id') == Mage::getSingleton('customer/session')->getCustomer()->getId())):?>
 <form action="<?php echo $this->getSaveUrl() ?>" method="post" id="form-reply-validate">
     <?php if($this->getTicket()->hasData('ticket_id')): ?>
         <input type="hidden" name="ticket_id" value="<?php echo $this->getTicket()->getId()?>" />
@@ -21,3 +22,4 @@
     var customForm = new VarienForm('form-reply-validate');
     //]]>
 </script>
+<?php endif?>
