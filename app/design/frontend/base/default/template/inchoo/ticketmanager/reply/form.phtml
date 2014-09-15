@@ -1,7 +1,7 @@
-<?php if(Mage::helper('inchoo_ticketmanager')->getCustomerCanReplyAll() || ($this->getTicket()->getData('cusotmer_id') == Mage::getSingleton('customer/session')->getCustomer()->getId())):?>
+<?php if(Mage::helper('inchoo_ticketmanager')->getCustomerCanReplyAll() || ($this->getTicket()->getData('customer_id') == Mage::getSingleton('customer/session')->getCustomer()->getId())):?>
 <form action="<?php echo $this->getSaveUrl() ?>" method="post" id="form-reply-validate">
     <?php if($this->getTicket()->hasData('ticket_id')): ?>
-        <input type="hidden" name="ticket_id" value="<?php echo $this->getTicket()->getId()?>" />
+        <input type="hidden" id="ticket_id" name="ticket_id" value="<?php echo $this->getTicket()->getId()?>" />
     <?php endif; ?>
     <div class="fieldset">
         <h2 class="legend"><?php echo $this->__('Add new Reply') ?></h2>

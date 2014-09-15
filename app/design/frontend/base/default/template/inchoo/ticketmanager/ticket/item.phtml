@@ -25,7 +25,7 @@
     <?php if($_ticketItem->isOpen()):?>
         <div><?php echo $this->getChildHtml('reply.form'); ?></div>
     <?php endif; ?>
-    <div><?php echo $this->getChildHtml('reply.list'); ?></div>
+    <div id="reply-list-container"><?php echo $this->getChildHtml('reply.list'); ?></div>
 </div>
 <div class="buttons-set"><p class="back-link"><a href="<?php echo $this->getBackUrl() ?>"><small>« </small>
     <?php echo Mage::helper('inchoo_ticketmanager')->__('Return to My Tickets') ?>

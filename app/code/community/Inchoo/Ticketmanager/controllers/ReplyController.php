@@ -37,7 +37,7 @@ class Inchoo_Ticketmanager_ReplyController extends Mage_Core_Controller_Front_Ac
             //replying to all tickets is enabled or replier is ticket owner
             $replier_id = Mage::getSingleton('customer/session')->getCustomer()->getId();
             if(!Mage::helper('inchoo_ticketmanager')->getCustomerCanReplyAll()
-                && $model->getData('cusotmer_id') != $replier_id){
+                && $model->getData('customer_id') != $replier_id){
                 $this->_redirect('noRoute');
                 return;
             }

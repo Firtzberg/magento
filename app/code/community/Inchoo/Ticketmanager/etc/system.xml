@@ -38,7 +38,7 @@
 						</enabled>
 						<items_per_page translate="label">
 							<label>Tickets Per Page</label>
-							<comment>Empty value is the same as default 20.</comment>
+							<comment>Empty value is the same as default 10.</comment>
 							<sort_order>30</sort_order>
 							<depends><enabled>1</enabled></depends>
 							<show_in_default>1</show_in_default>
@@ -47,7 +47,7 @@
 						</items_per_page>
                         <replies_per_page translate="label">
                             <label>Replies Per Page</label>
-                            <comment>Empty value is the same as default 20.</comment>
+                            <comment>Empty value is the same as default 10.</comment>
                             <sort_order>31</sort_order>
                             <depends><enabled>1</enabled></depends>
                             <show_in_default>1</show_in_default>
